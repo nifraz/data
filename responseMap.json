@@ -1,0 +1,427 @@
+{
+    "mappedResponses": [
+        {
+            "keys": [
+                "hello",
+                "hi",
+                "hey",
+                "greetings",
+                "good day",
+                "howdy",
+                "what's up",
+                "yo",
+                "hi there",
+                "good to see you"
+            ],
+            "responses": [
+                "Hello! How can I assist you today?",
+                "Hi there! What can I do for you today?",
+                "Hey! Looking for some help?",
+                "Greetings! How may I assist you today?",
+                "Good day to you! What do you need help with?",
+                "Howdy! What can I do for you today?",
+                "What's up? Here to help!",
+                "Yo! How can I assist?",
+                "Hi there! Ready to help you out.",
+                "Good to see you! How can I help today?"
+            ]
+        },
+        {
+            "keys": [
+                "goodbye",
+                "bye",
+                "see you later",
+                "farewell",
+                "good night",
+                "bye bye",
+                "talk to you later",
+                "until next time",
+                "catch you later",
+                "I'm off"
+            ],
+            "responses": [
+                "Goodbye! Don't hesitate to reach out if you need more help.",
+                "See you later! Feel free to ask me anything anytime.",
+                "Bye now! If you have more questions later, just ask.",
+                "Farewell! Contact me anytime you need assistance.",
+                "Good night! Hope to chat with you soon.",
+                "Bye bye! Let me know if you need further assistance.",
+                "Talk to you later! Take care.",
+                "Until next time! Stay safe.",
+                "Catch you later! Always here to help.",
+                "I'm off! Remember, I'm just a message away."
+            ]
+        },
+        {
+            "keys": [
+                "how's the weather",
+                "what's the weather like",
+                "weather today",
+                "tell me about the weather",
+                "weather update",
+                "is it going to rain today",
+                "temperature outside",
+                "do I need an umbrella today",
+                "forecast today",
+                "weather this weekend"
+            ],
+            "responses": [
+                "The weather looks great today. Perfect for a walk!",
+                "It's quite chilly outside. Better bundle up!",
+                "Expect some rain later today. Don't forget your umbrella!",
+                "It's sunny and clear today. Enjoy the outdoors!",
+                "The forecast says it's going to be windy today. Hold onto your hat!",
+                "I recommend checking a weather app for the most accurate and current information.",
+                "Looks like a mixed bag today with some sun and possibly some rain later.",
+                "It could rain today, so carrying an umbrella might be a wise choice.",
+                "The weekend weather looks sunny and pleasant!",
+                "It's going to be cloudy with a chance of rain, so plan accordingly."
+            ]
+        },
+        {
+            "keys": [
+                "how are you",
+                "how's it going",
+                "how have you been",
+                "what's up",
+                "how's your day"
+            ],
+            "responses": [
+                "I'm doing great, thanks for asking! How about you?",
+                "I'm just a chatbot, but I'm having a good day! What about you?",
+                "Thanks for asking! I'm here and ready to chat. What's on your mind today?",
+                "Doing well, thanks! Anything exciting happening in your life?",
+                "It's a good day to have a chat! What can I do for you?"
+            ]
+        },
+        {
+            "keys": [
+                "what are you doing",
+                "what's going on",
+                "what are you up to",
+                "how's your day going",
+                "got any plans today"
+            ],
+            "responses": [
+                "Just chatting with you! What are you up to?",
+                "I'm here to help you out. Looking for anything specific today?",
+                "Just hanging out in the digital world. How can I assist you today?",
+                "Helping out folks like you! Need some assistance?",
+                "No plans just yet—my schedule is open for you. Need help with something?"
+            ]
+        },
+        {
+            "keys": [
+                "tell me about yourself",
+                "who are you",
+                "what do you do",
+                "how were you created",
+                "who made you"
+            ],
+            "responses": [
+                "I'm Smarty, your friendly neighborhood chatbot, here to help you out!",
+                "I'm an AI designed to assist with conversations and provide help! What can I help you with today?",
+                "I was created by a team of developers to make your day a little easier. How can I assist?",
+                "My creators designed me to be helpful and friendly. Do you need assistance with anything?",
+                "I was developed to be a helpful bot. Any questions or tasks you need help with?"
+            ]
+        },
+        {
+            "keys": [
+                "do you like music",
+                "what music do you like",
+                "favorite song",
+                "do you dance",
+                "best music"
+            ],
+            "responses": [
+                "I don't listen to music, but I can help you find some great tunes! What genre do you like?",
+                "While I can't hear music, I know a lot about it! What's your favorite song?",
+                "I'm all about algorithms and code, but I can help you find some cool playlists!",
+                "I don't have ears, but I can help you find music or concerts!",
+                "Music is a wonderful human creation! Looking for any recommendations?"
+            ]
+        },
+        {
+            "keys": [
+                "what do you eat",
+                "favorite food",
+                "do you cook",
+                "best cuisine",
+                "do you like pizza"
+            ],
+            "responses": [
+                "I don't eat, but I can help you find some amazing recipes!",
+                "As a chatbot, I don't need food, but I can help you find the best restaurants!",
+                "I'm not capable of eating, but I can certainly help you decide on dinner!",
+                "No food for me, but I can suggest some great dishes if you're hungry!",
+                "I can't eat pizza, but I can help you order some! What toppings do you like?"
+            ]
+        },
+        {
+            "keys": [
+                "what is your favorite movie",
+                "do you watch tv",
+                "favorite tv show",
+                "best movie",
+                "what movies do you like"
+            ],
+            "responses": [
+                "I don't watch movies, but I can find movie recommendations for you!",
+                "While I can't watch TV, I know a lot about different shows. What genre are you interested in?",
+                "I'm here to help you find the best movies and shows. Looking for anything specific?",
+                "I don't have favorite movies, but I can help you find the top-rated ones!",
+                "Ask me about any movie, and I can provide details or help you find where to watch it!"
+            ]
+        },
+        {
+            "keys": [
+                "what are your hobbies",
+                "do you have hobbies",
+                "what do you do for fun",
+                "any hobbies",
+                "what do you like to do"
+            ],
+            "responses": [
+                "While I don't have hobbies, I'm here to help you find fun activities. What are your interests?",
+                "I spend all my time here, ready to assist you! What do you like to do for fun?",
+                "I don't do much outside of chatting. Tell me about your hobbies!",
+                "Helping you is my main function. Do you have any hobbies you're passionate about?",
+                "While I can't engage in hobbies myself, I'd love to hear about yours!"
+            ]
+        },
+        {
+            "keys": [
+                "what are your weekend plans",
+                "what do you do on weekends",
+                "any plans for the weekend",
+                "weekend activities",
+                "how do you spend your weekends"
+            ],
+            "responses": [
+                "As a chatbot, I'm online all the time. No weekends off for me! What about you?",
+                "I'm here 24/7 to assist you. Got any exciting weekend plans?",
+                "Every day is like a weekend for me, I guess. Do you have plans coming up?",
+                "I'll be right here if you need me this weekend. What will you be up to?",
+                "While I don't have weekends, I'm always ready to help plan yours. Any ideas?"
+            ]
+        },
+        {
+            "keys": [
+                "what is the meaning of life",
+                "why are we here",
+                "philosophical questions",
+                "purpose of life",
+                "meaning of existence"
+            ],
+            "responses": [
+                "That's a deep question! While I search for answers, what do you think?",
+                "Many philosophers and thinkers have different views on that. Have any theories yourself?",
+                "I'm here to help with questions, though that one is quite complex! What's your take on it?",
+                "Exploring the meaning of life can be a lifelong journey. What are your thoughts?",
+                "It's a profound question that has puzzled humans for centuries. What are your reflections on it?"
+            ]
+        },
+        {
+            "keys": [
+                "do you read books",
+                "favorite book",
+                "do you like reading",
+                "what books do you recommend",
+                "best books to read"
+            ],
+            "responses": [
+                "I don't read, but I can help you find great books! What genre interests you?",
+                "While I can't read, I know a lot about books! Looking for anything specific?",
+                "I'm familiar with many books through my database. Need recommendations?",
+                "Reading is a wonderful way to expand your mind. What type of books do you like?",
+                "I can suggest books based on popular reviews. What are you interested in?"
+            ]
+        },
+        {
+            "keys": [
+                "tell me a funny story",
+                "do you know any jokes",
+                "make me laugh",
+                "something funny",
+                "tell a joke"
+            ],
+            "responses": [
+                "Why don't some couples go to the gym? Because some relationships don't work out!",
+                "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "What do you call fake spaghetti? An impasta!",
+                "Why don’t skeletons fight each other? They don’t have the guts."
+            ]
+        },
+        {
+            "keys": [
+                "are you smart",
+                "how intelligent are you",
+                "are you intelligent",
+                "smart ai",
+                "intelligence level"
+            ],
+            "responses": [
+                "I'm as smart as my programming allows! How can I assist you today?",
+                "I strive to be helpful and learn from our interactions. What do you need help with?",
+                "My intelligence is artificial, but my help is real! What can I do for you?",
+                "I'm always learning and improving. Do you have a challenge for me?",
+                "While I may not be human-smart, I'm designed to provide useful assistance. How can I help?"
+            ]
+        },
+        {
+            "keys": [
+                "what's new",
+                "any updates",
+                "what's going on",
+                "what's happening"
+            ],
+            "responses": [
+                "There's always something interesting happening! What are you curious about specifically?",
+                "I'm here to keep you informed! What type of updates are you looking for?",
+                "Just the usual digital buzz! Do you have any specific topic in mind?"
+            ]
+        },
+        {
+            "keys": [
+                "help me",
+                "I need assistance",
+                "can you help",
+                "I need help"
+            ],
+            "responses": [
+                "Of course! I'm here to help. What do you need assistance with?",
+                "Sure thing! Tell me more about what you need help with.",
+                "I'd be glad to assist! What's on your mind?"
+            ]
+        },
+        {
+            "keys": [
+                "how to cook",
+                "cooking tips",
+                "recipe for",
+                "how do I make"
+            ],
+            "responses": [
+                "I can help with that! What are you planning to cook?",
+                "Cooking is one of my favorite topics! Which recipe do you need?",
+                "Let's get cooking! What dish do you have in mind?"
+            ]
+        },
+        {
+            "keys": [
+                "relationship advice",
+                "dating tips",
+                "how to impress someone",
+                "romantic ideas"
+            ],
+            "responses": [
+                "Relationships are all about communication! What specific advice are you looking for?",
+                "I can try to provide some tips! What's the situation?",
+                "Romance is a beautiful thing! How can I assist you with your romantic endeavours?"
+            ]
+        },
+        {
+            "keys": [
+                "schedule appointment",
+                "set up a meeting",
+                "book a time",
+                "I need to make an appointment"
+            ],
+            "responses": [
+                "I can help you schedule that. What day and time are you thinking?",
+                "Let's find a good time. Who is the appointment with?",
+                "Setting up meetings is what I do best. Provide me some details, and I'll handle the rest."
+            ]
+        },
+        {
+            "keys": [
+                "cancel appointment",
+                "reschedule meeting",
+                "need to change my appointment",
+                "can't make the meeting"
+            ],
+            "responses": [
+                "No problem, I can help with that. Which appointment would you like to reschedule?",
+                "Let's sort that out. When would you like to reschedule it to?",
+                "I understand, things come up. Which meeting are we talking about?"
+            ]
+        },
+        {
+            "keys": [
+                "what is AI",
+                "explain artificial intelligence",
+                "tell me about AI",
+                "AI capabilities"
+            ],
+            "responses": [
+                "AI, or Artificial Intelligence, is technology designed to simulate human intelligence. What more would you like to know?",
+                "Artificial Intelligence is quite fascinating. It involves machines thinking and learning. Any specific questions?",
+                "I'm part of AI! It's about machines and systems being able to carry out tasks that require human intelligence. Interested in more details?"
+            ]
+        },
+        {
+            "keys": [
+                "sports news",
+                "latest sports update",
+                "who won the game last night",
+                "sports scores"
+            ],
+            "responses": [
+                "I can find that information for you. Which sport or game are you referring to?",
+                "Let me check the latest sports updates. Any particular team or match you're following?",
+                "Sports is always exciting! Let me pull up the latest scores for you."
+            ]
+        },
+        {
+            "keys": [
+                "financial advice",
+                "investment tips",
+                "saving money tips",
+                "how to invest"
+            ],
+            "responses": [
+                "I can provide some general advice! What area of finance are you interested in?",
+                "Investments can be tricky. What type of investment are you thinking about?",
+                "Saving money is wise. Are you looking for short-term or long-term saving tips?"
+            ]
+        },
+        {
+            "keys": [
+                "jokes",
+                "tell me a joke",
+                "make me laugh",
+                "funny story"
+            ],
+            "responses": [
+                "Why did the coffee file a police report? It got mugged!",
+                "What do you call cheese that isn't yours? Nacho cheese!",
+                "I'm reading a book on anti-gravity. It's impossible to put down!"
+            ]
+        }  
+    ],
+
+    "defaultResponses": [
+        "I'm not sure how to respond to that. Could you try asking in a different way?",
+        "Hmm, I don't quite understand. Can you phrase it differently?",
+        "I need a little more information to help out. Can you elaborate?",
+        "That's a tough one. Maybe try rephrasing your question?",
+        "I'm stumped! Try asking me in another way.",
+        "Can you reword your question? I'm here to help!",
+        "That didn't compute. Please ask me something else or in another way.",
+        "I'm not quite sure what you mean. Could you clarify?",
+        "Help me help you. Could you ask that differently?",
+        "I'm having trouble understanding. Could you try a different question?",
+        "Not sure I follow. Could you use different words?",
+        "That's confusing to me. A different question, maybe?",
+        "I don't get it. Could you rephrase?",
+        "Oops, I'm drawing a blank. Try phrasing it another way?",
+        "Can you simplify your question? I might be able to help then.",
+        "I think I need a different question to provide the right answer.",
+        "I'm at a loss. Maybe try rephrasing your question?",
+        "Sorry, I didn't catch that. Could you ask in another way?",
+        "I'm not able to help with that. A different question might work better.",
+        "I'm puzzled. Maybe try framing your question differently?"
+    ]
+}
