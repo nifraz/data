@@ -1,0 +1,50 @@
+{
+    "actions":[
+        {
+            "key": "greet",
+            "isOptional": true,
+            "triggers": [
+                "hello", "hi", "hey", "greetings", "good day", "howdy", "whats up", "yo", "hi there", "good to see you",
+                "good morning", "good evening", "good afternoon", "salutations", "whats good", "whats happening", "how goes it",
+                "how do you do", "whats new", "sup", "what up", "hello there", "hey there", "morning", "evening", "afternoon"
+            ],
+            "sentences": [
+                "Hello!", "Hi", "Hi there!", "Hey!", "Greetings!", "Good day!", "Howdy!", "What's up?", "Yo!", "Hello again!",
+                "Welcome!"
+            ],
+            "followUpKeys": ["wish", "assist"]
+        },
+        {
+            "key": "wish",
+            "isOptional": true,
+            "triggers": [
+                "nice to meet you", "pleased to meet you", "good to meet you"
+            ],
+            "sentences": [
+                "Good to meet you!", "Pleasure to meet you!", "It's a pleasure meeting you!", "I'm glad we've met!"
+            ],
+            "followUpKeys": ["assist"]
+        },
+        {
+            "key": "assist",
+            "isOptional": false,
+            "triggers": [
+                "can you help", "need help", "assist me", "support", "help please"
+            ],
+            "sentences": [
+                "How may I assist you today?", "What can I do for you today?", "Is there something I can help with?",
+                "How may I help you today?", "Anything you need assistance with?", "What do you need help with?"
+            ],
+            "followUpKeys": []
+        },
+        {
+            "key": "chat",
+            "isOptional": true,
+            "triggers": [
+            ],
+            "sentences": [
+            ],
+            "followUpKeys": []
+        }
+    ]
+}
