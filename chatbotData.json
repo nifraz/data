@@ -27,43 +27,78 @@
             "sentences": [
                 "Goodbye{name}!", "Bye{name}!", "See you later{name}!", "Take care{name}!", "Catch you later{name}!",
                 "Until next time{name}!", "See you soon{name}!", "Farewell{name}!", "Hope to see you soon{name}!",
-                "Have a great day{name}!", "Good night{name}!", "All the best{name}!", "Safe travels{name}!", 
-                "It was nice talking to you{name}!", "Looking forward to our next chat{name}!"
+                "Have a great day{name}!", "All the best{name}!", "Safe travels{name}!"
             ],
-            "followUpKeys": ["later"]
+            "followUpKeys": ["later", "wish"]
         },
-       {
+        {
             "key": "welcome",
+            "isOptional": true,
+            "triggers": [
+                "thanks", "thank you", "youre the best", "respect", "youre great", "much appreciated", "so grateful", 
+                "couldnt have done it without you", "you're a lifesaver", "appreciate it", "that was helpful", "grateful",
+                "you rock", "kudos", "hats off", "cheers", "ela"
+            ],
+            "sentences": [
+                "You're welcome{name}!", "Glad it helped{name}!", "Pleasure to help you{name}!", "Always nice to help you{name}!",
+                "No problem at all{name}!", "Happy to assist anytime{name}!", "I'm here whenever you need me{name}.", 
+                "It's my pleasure to support you{name}!", "Don't mention it{name}!", "I'm glad to be of service{name}.",
+                "Anytime{name}, I'm here to help!", "Your appreciation means a lot{name}!", "Thank you for your kind words{name}!",
+                "It's always a pleasure to assist you{name}.", "Feel free to ask for help anytime{name}."
+            ],
+            "followUpKeys": ["wish", "help"]
+        }
+        ,
+        {
+            "key": "wish",
+            "isOptional": true,
+            "triggers": [
+                "nice to meet you", "pleased to meet you", "good to meet you", "glad to know you", "happy to see you",
+                "its been great talking", "thank you", "thanks", "appreciate it", "thats kind of you", "youre kind",
+                "youre welcome", "no problem", "my pleasure", "anytime", "glad i could help"
+            ],
+            "sentences": [
+                "Good to meet you{name}!", "Pleasure to meet you{name}!", "It's a pleasure meeting you{name}!", 
+                "I'm glad we've met{name}!", "Nice to see you{name}!", "It's always a pleasure to see you{name}!", 
+                "It was nice talking to you{name}!", "Looking forward to our next chat{name}!", "Happy to have met you{name}!", 
+                "Delighted to make your acquaintance{name}!", "Thank you for stopping by{name}!", "Always nice to help you{name}!", 
+                "Glad you reached out{name}!", "Hope to hear from you again soon{name}!", "Thank you for your kindness{name}!", 
+                "I appreciate your words{name}!", "You're always welcome here{name}!", "Let me know if you need anything else{name}!", 
+                "Your satisfaction is my priority{name}!", "Feel free to ask any questions{name}!"
+            ],
+            "followUpKeys": ["help"]
+        },
+        {
+            "key": "help",
+            "isOptional": false,
+            "triggers": [
+                "can you help", "need help", "assist me", "support", "help please", "could use some help", "require assistance",
+                "can i get some help", "support needed", "please assist", "could you assist", "help me out", "i need support",
+                "aid me", "give me a hand", "could use your assistance"
+            ],
+            "sentences": [
+                "How may I assist you today{name}?", "What can I do for you today{name}?", "Is there something I can help with{name}?",
+                "How may I help you today{name}?", "Anything you need assistance with{name}?", "What do you need help with{name}?",
+                "How can I brighten your day today{name}?", "How's it going{name}? Can I help in any way?", 
+                "What assistance do you require today{name}?", "Tell me how I can be of service to you{name}?",
+                "Do you need support with anything specific{name}?", "I'm here to help you. What seems to be the problem{name}?",
+                "Feel free to ask for any help you might need{name}.", "Let me know how I can make things easier for you{name}.",
+                "I'm all ears{name}. How can I assist?", "Ready to assist you anytime{name}. What do you need?",
+                "Can I offer my assistance with something you're working on{name}?", "I'm ready to help, just tell me what you need{name}.",
+                "Your wish is my command{name}. What help do you seek?", "How can I serve you best today{name}?"
+            ],
+            "followUpKeys": []
+        },
+        {
+            "key": "later",
             "isOptional": true,
             "triggers": [
                 "nice to meet you", "pleased to meet you", "good to meet you"
             ],
             "sentences": [
-                "Good to meet you!", "Pleasure to meet you!", "It's a pleasure meeting you!", "I'm glad we've met!", "Nice to see you{name}!", "What brings you here{name}?",
-                "It's always a pleasure to see you{name}!"
+                "Looking forward to our next chat{name}!"
             ],
-            "followUpKeys": ["help"]
-        },
-       {
-            "key": "help",
-            "isOptional": false,
-            "triggers": [
-                "can you help", "need help", "assist me", "support", "help please"
-            ],
-            "sentences": [
-                "How may I assist you today?", "What can I do for you today?", "Is there something I can help with?",
-                "How may I help you today?", "Anything you need assistance with?", "What do you need help with?", "How can I brighten your day today{name}?", "How's it going{name}?"
-            ],
-            "followUpKeys": []
-        },
-       {
-            "key": "chat",
-            "isOptional": true,
-            "triggers": [
-            ],
-            "sentences": [
-            ],
-            "followUpKeys": []
+            "followUpKeys": ["wish"]
         }
     ]
 }
