@@ -1,43 +1,62 @@
 {
     "actions":[
-        {
-            "key": "greet",
+       {
+            "key": "hi",
             "isOptional": true,
             "triggers": [
                 "hello", "hi", "hey", "greetings", "good day", "howdy", "whats up", "yo", "hi there", "good to see you",
                 "good morning", "good evening", "good afternoon", "salutations", "whats good", "whats happening", "how goes it",
-                "how do you do", "whats new", "sup", "what up", "hello there", "hey there", "morning", "evening", "afternoon"
+                "how do you do", "whats new", "sup", "what up", "hello there", "hey there", "morning", "evening", "afternoon",
+                "hola", "bonjour", "guten tag", "ciao", "shalom", "namaste", "salaam", "konichiwa", "vanakkam", "ayubovan"
             ],
             "sentences": [
-                "Hello!", "Hi", "Hi there!", "Hey!", "Greetings!", "Good day!", "Howdy!", "What's up?", "Yo!", "Hello again!",
-                "Welcome!"
+                "Hello{name}!", "Hi{name}!", "Hi there{name}!", "Hey{name}!", "Greetings{name}!",
+                "Good day{name}!", "Howdy{name}!", "What's up{name}?", "Yo{name}!", "Hello there{name}!",
+                "Welcome{name}!"
             ],
-            "followUpKeys": ["wish", "assist"]
+            "followUpKeys": ["welcome", "help"]
         },
         {
-            "key": "wish",
+            "key": "bye",
+            "isOptional": true,
+            "triggers": [
+                "bye", "goodbye", "see you later", "see you soon", "until next time", "farewell", "take care", 
+                "see you", "catch you later", "i must go", "i have to go", "talk to you later", "later", 
+                "good night", "adios", "auf wiedersehen", "sayonara", "au revoir", "so long", "im off", "yanawa", "poren"
+            ],
+            "sentences": [
+                "Goodbye{name}!", "Bye{name}!", "See you later{name}!", "Take care{name}!", "Catch you later{name}!",
+                "Until next time{name}!", "See you soon{name}!", "Farewell{name}!", "Hope to see you soon{name}!",
+                "Have a great day{name}!", "Good night{name}!", "All the best{name}!", "Safe travels{name}!", 
+                "It was nice talking to you{name}!", "Looking forward to our next chat{name}!"
+            ],
+            "followUpKeys": ["later"]
+        },
+       {
+            "key": "welcome",
             "isOptional": true,
             "triggers": [
                 "nice to meet you", "pleased to meet you", "good to meet you"
             ],
             "sentences": [
-                "Good to meet you!", "Pleasure to meet you!", "It's a pleasure meeting you!", "I'm glad we've met!"
+                "Good to meet you!", "Pleasure to meet you!", "It's a pleasure meeting you!", "I'm glad we've met!", "Nice to see you{name}!", "What brings you here{name}?",
+                "It's always a pleasure to see you{name}!"
             ],
-            "followUpKeys": ["assist"]
+            "followUpKeys": ["help"]
         },
-        {
-            "key": "assist",
+       {
+            "key": "help",
             "isOptional": false,
             "triggers": [
                 "can you help", "need help", "assist me", "support", "help please"
             ],
             "sentences": [
                 "How may I assist you today?", "What can I do for you today?", "Is there something I can help with?",
-                "How may I help you today?", "Anything you need assistance with?", "What do you need help with?"
+                "How may I help you today?", "Anything you need assistance with?", "What do you need help with?", "How can I brighten your day today{name}?", "How's it going{name}?"
             ],
             "followUpKeys": []
         },
-        {
+       {
             "key": "chat",
             "isOptional": true,
             "triggers": [
