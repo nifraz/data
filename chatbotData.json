@@ -21,15 +21,32 @@
             "isOptional": true,
             "triggers": [
                 "bye", "goodbye", "see you later", "see you soon", "until next time", "farewell", "take care", 
-                "see you", "catch you later", "i must go", "i have to go", "talk to you later", "later", 
-                "good night", "adios", "auf wiedersehen", "sayonara", "au revoir", "so long", "im off", "yanawa", "poren"
+                "see you", "i must go", "i have to go", "good night", "adios", "auf wiedersehen", "sayonara", "au revoir", 
+                "so long", "im off", "yanawa", "poren"
             ],
             "sentences": [
-                "Goodbye{name}!", "Bye{name}!", "See you later{name}!", "Take care{name}!", "Catch you later{name}!",
+                "Goodbye{name}!", "Bye{name}!", "Take care{name}!", 
                 "Until next time{name}!", "See you soon{name}!", "Farewell{name}!", "Hope to see you soon{name}!",
                 "Have a great day{name}!", "All the best{name}!", "Safe travels{name}!"
             ],
             "followUpKeys": ["later", "wish"]
+        },
+        {
+            "key": "later",
+            "isOptional": false,
+            "triggers": [
+                "catch you later", "talk to you later", "later", "see you soon", "until next time", "until we meet again", 
+                "see you next time", "goodbye for now", "be seeing you", "till next time", "see you in a bit", 
+                "looking forward to our next conversation", "bye for now", "lets catch up soon", "well speak soon"
+            ],
+            "sentences": [
+                "Looking forward to our next chat{name}!", "Catch you later{name}!", "See you later{name}!",
+                "Can't wait to talk again soon{name}!", "Until next time{name}!", "See you soon{name}!",
+                "Looking forward to catching up again{name}!", "Hope to see you soon{name}!", "Till next time{name}!",
+                "Let's chat again soon{name}!", "Bye for now{name}! Stay in touch.", "I'll be here when you return{name}.",
+                "Can't wait to continue our conversation{name}!", "Feel free to drop by anytime{name}!", "Jayawewa{name}."
+            ],
+            "followUpKeys": ["wish"]
         },
         {
             "key": "welcome",
@@ -47,8 +64,7 @@
                 "It's always a pleasure to assist you{name}.", "Feel free to ask for help anytime{name}."
             ],
             "followUpKeys": ["wish", "help"]
-        }
-        ,
+        },
         {
             "key": "wish",
             "isOptional": true,
@@ -87,18 +103,107 @@
                 "Can I offer my assistance with something you're working on{name}?", "I'm ready to help, just tell me what you need{name}.",
                 "Your wish is my command{name}. What help do you seek?", "How can I serve you best today{name}?"
             ],
-            "followUpKeys": []
+            "followUpKeys": ["student", "teacher"]
         },
+
+
         {
-            "key": "later",
+            "key": "joke",
             "isOptional": true,
             "triggers": [
-                "nice to meet you", "pleased to meet you", "good to meet you"
+                "jokes", "tell me a joke", "tell me a funny story", "do you know any jokes", "make me laugh",
+                "something funny", "tell a joke", "funny story"
             ],
             "sentences": [
-                "Looking forward to our next chat{name}!"
+                "Why don't some couples go to the gym? Because some relationships don't work out!",
+                "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "What do you call fake spaghetti? An impasta!",
+                "Why don't skeletons fight each other? They don't have the guts.",
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "What do you call fake spaghetti? An impasta!",
+                "I'm reading a book on anti-gravity. It's impossible to put down!",
+                "Why did the bicycle fall over? Because it was two-tired!",
+                "What did one ocean say to the other ocean? Nothing, they just waved.",
+                "Why do bees have sticky hair? Because they use honeycombs!",
+                "What do you call a pile of cats? A meowtain.",
+                "Why couldn't the leopard play hide and seek? Because he was always spotted.",
+                "What do you get when you cross a snowman with a vampire? Frostbite.",
+                "How do you organize a space party? You planet.",
+                "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+                "What do you call a belt made of watches? A waist of time.",
+                "How do you find Will Smith in the snow? You look for fresh prints.",
+                "What do you call a dinosaur with an extensive vocabulary? A thesaurus.",
+                "What do you call cheese that isn't yours? Nacho cheese!",
+                "Why did the tomato turn red? Because it saw the salad dressing!",
+                "What do you call a cow with no legs? Ground beef.",
+                "What do you call a dog that can do magic? A labracadabrador.",
+                "Why don't oysters donate to charity? Because they are shellfish.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "What do you call a factory that makes okay products? A satisfactory.",
+                "Why did the math book look sad? Because it had too many problems.",
+                "What do you call an alligator in a vest? An investigator.",
+                "Why couldn't the bicycle stand up by itself? It was two-tired.",
+                "What did the grape do when he got stepped on? He let out a little wine.",
+                "Why was the math book sad? It had too many problems.",
+                "What do you call a fish with no eyes? Fsh.",
+                "Why are frogs so happy? They eat whatever bugs them.",
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "Why did the scarecrow become a successful neurosurgeon? He was outstanding in his field!",
+                "Why don't skeletons fight each other? They don't have the guts.",
+                "What do you get from a pampered cow? Spoiled milk.",
+                "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+                "What has ears but cannot hear? A cornfield.",
+                "Why don't some couples go to the gym? Because some relationships don't work out!",
+                "Why did the kid bring a ladder to school? Because he wanted to go to high school.",
+                "What has keys but can't open locks? A piano.",
+                "What do you call a laughing motorcycle? A Yamahahaha.",
+                "Why did the picture go to jail? Because it was framed.",
+                "What do you call a magician who loses his magic? Ian.",
+                "Why did the student eat his homework? Because the teacher told him it was a piece of cake.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "What do you call a dinosaur with an extensive vocabulary? A thesaurus.",
+                "What do you call an alligator in a vest? An investigator.",
+                "What do you get when you cross a snowman with a vampire? Frostbite.",
+                "How do you throw a space party? You planet.",
+                "Why don't skeletons fight each other? They don't have the guts.",
+                "Why did the tomato turn red? Because it saw the salad dressing!",
+                "What do you call a factory that makes okay products? A satisfactory.",
+                "Why did the coffee file a police report? It got mugged!",
+                "What do you call cheese that isn't yours? Nacho cheese!",
+                "I'm reading a book on anti-gravity. It's impossible to put down!"
             ],
-            "followUpKeys": ["wish"]
+            "followUpKeys": ["help"]
+        },
+        {
+            "key": "404",
+            "isOptional": false,
+            "triggers": [
+                "blah", "psps", "meow"
+            ],
+            "sentences": [
+                "I'm not sure how to respond to that. Could you try asking in a different way?",
+                "Hmm, I don't quite understand. Can you phrase it differently?",
+                "I need a little more information to help out. Can you elaborate?",
+                "That's a tough one. Maybe try rephrasing your question?",
+                "I'm stumped! Try asking me in another way.",
+                "Can you reword your question? I'm here to help!",
+                "That didn't compute. Please ask me something else or in another way.",
+                "I'm not quite sure what you mean. Could you clarify?",
+                "Help me help you. Could you ask that differently?",
+                "I'm having trouble understanding. Could you try a different question?",
+                "Not sure I follow. Could you use different words?",
+                "That's confusing to me. A different question, maybe?",
+                "I don't get it. Could you rephrase?",
+                "Oops, I'm drawing a blank. Try phrasing it another way?",
+                "Can you simplify your question? I might be able to help then.",
+                "I think I need a different question to provide the right answer.",
+                "I'm at a loss. Maybe try rephrasing your question?",
+                "Sorry, I didn't catch that. Could you ask in another way?",
+                "I'm not able to help with that. A different question might work better.",
+                "I'm puzzled. Maybe try framing your question differently?"
+            ],
+            "followUpKeys": ["help"]
         }
     ]
 }
