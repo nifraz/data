@@ -1,28 +1,205 @@
 {
     "actions":[
         {
-            "key": "hi",
+            "key": "ask-name",
+            "isImportant": false,
+            "isQuestion": true,
+            "keywords": [
+                "what's your name", "what is your name", "your name", "your name please", "name please", "may I know your name", 
+                "who are you", "what do I call you", "what should I call you"
+            ],
+            "phrases": [
+                "Can I know your name{target}?", "How can I call you{target}?", "What's your good name{target}?", 
+                "May I ask your name{target}?", "What should I call you{target}?", "Who do I have the pleasure of speaking with{target}?",
+                "Your name, please{target}?"
+            ],
+            "followUpKeys": [],
+            "reactionKeys": ["tell-name"]
+        },
+        {
+            "key": "tell-name",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "ninja", "potato", "rocket", "gizmo", "bender", "widget", "muffin", "wombat", 
+                "peanut", "gadget", "bandit", "rascal", "biscuit", "tango", "snack", "pickle", 
+                "cheeto", "fidget", "puzzle", "squash"
+            ],
+            "phrases": [
+                "I'm called{self}!", "People call me{self}.", "My name is{self}.",
+                "You can call me{self}.", "I go by the name{self}.", "Just call me{self}.",
+                "{self} at your service."
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-nice-name"]
+        },
+        {
+            "key": "say-nice-name",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "nice name", "great name", "cool name", "interesting name", "unique name",
+                "love that name", "what a name", "beautiful name", "awesome name", "wonderful name"
+            ],
+            "phrases": [
+                "That's a nice name{target}!", "I really like your name{target}, it's quite unique!",
+                "What a great name you have{target}!", "Your name is really cool{target}!",
+                "That's an interesting name{target}. I like it!", "Such a beautiful name{target}!",
+                "Wow{target}, your name is awesome!", "I must say{target}, you have a wonderful name!",
+                "Your name sounds really nice{target}. It suits you!", "Love that name{target}, it's so unique!"
+            ],
+            "followUpKeys": ["say-random-thing"],
+            "reactionKeys": ["say-thanks"]
+        },
+        {
+            "key": "say-random-thing",
+            "isImportant": false,
+            "keywords": [
+                "small talk", "chat", "random thoughts", "casual chat", "just talking", "general talk",
+                "nothing special", "random chat", "light conversation", "miscellaneous chat"
+            ],
+            "phrases": [
+                "The weather's been interesting lately{target}.",
+                "I read somewhere that laughter is the best medicine{target}.",
+                "Sometimes I wonder what it would be like to go hiking{target}.",
+                "Do you have a favorite day of the week{target}? I think I'd like Thursdays if I had a choice.",
+                "What's the last good movie you watched{target}? I hear people talking about movies a lot.",
+                "I'm just here, trying to make sense of big data{target}.",
+                "What kind of music are you into{target}? I'm told music preferences can say a lot about a person.",
+                "It's interesting how different cultures have different greetings. I think that's a common greeting where you're from{target}.",
+                "They say pets can really cheer you up{target}?",
+                "Have you tried any new foods recently{target}? I hear experimenting with cooking can be really fun.",
+                "Reading anything interesting these days{target}? Books can be such a great escape, I've heard.",
+                "I think if I could travel, I'd like to see the oceans{target}.",
+                "I've been learning a lot about artificial intelligence. Hope you're too interested in AI{target}.",
+                "If I had to choose, I would rather explore space or the deep sea{target}.",
+                "What's a random fact you love to share{target}? I'm full of facts but always curious to learn more!",
+                "Isn't it fascinating how technology has changed over the years? I'm your favorite tech gadget{target}.",
+                "Do you like to stay up late or are you an early riser{target}? I guess I'm always 'awake'!",
+                "I heard that walking is a great way to stay active. It's simple but effective{target}.",
+                "Sometimes I think about how many stars are in the sky. It's pretty mind-boggling{target}.",
+                "It's said that everyone has a book in them. What do you think your book would be about{target}?",
+                "There's something peaceful about the sound of rain, don't you think{target}?",
+                "I read that honey never spoils. It could last forever{target}.",
+                "Did you know that octopuses have three hearts{target}? Imagine that!",
+                "They say that carrots used to be purple before the 17th century. Quite a colorful past{target}!",
+                "I've heard that laughter increases your lifespan. Guess we should share more jokes{target}.",
+                "Did you know that bananas are berries, but strawberries aren't{target}?",
+                "Apparently, a day on Venus is longer than a year on Venus. Time flies differently there{target}.",
+                "I'm told that plants grow faster to the sound of music. Sounds like they have good taste{target}.",
+                "Isn't it fascinating that ants never sleep{target}? They must get a lot done.",
+                "If you could choose a superpower, I wonder what you would choose{target}.",
+                "I've heard that a group of flamingos is called a 'flamboyance'. Quite fancy{target}.",
+                "They say the Eiffel Tower can be 15 cm taller during the summer. Heat expands metal{target}.",
+                "I read somewhere that a bolt of lightning is five times hotter than the sun{target}.",
+                "Did you know that the inventor of the Frisbee was turned into a Frisbee after he died{target}?",
+                "Apparently, the heart of a blue whale is as big as a small car. That's a lot of heart{target}.",
+                "I've heard that snails can sleep for three years. I wonder what they dream about{target}.",
+                "It's interesting that humans share 50% of their DNA with bananas. We're somewhat fruity{target}.",
+                "Did you know that the shortest war in history was between Britain and Zanzibar and lasted only 38 minutes{target}?",
+                "They say honeybees can recognize human faces. I wonder if they could recognize chatbots{target}.",
+                "Apparently, cows have best friends and get stressed when separated. It's important to stick together{target}.",
+                "I read that the longest time between two twins being born is 87 days. Quite a delay{target}.",
+                "Did you know that the unicorn is the national animal of Scotland{target}? Quite magical!",
+                "It's said that the total weight of ants on earth once equaled the total weight of people{target}.",
+                "Apparently, Alfred Hitchcock was afraid of eggs. Even the greats have their fears{target}.",
+                "I heard that the world's oldest known 'your mom' joke is 3,500 years old{target}.",
+                "Did you know that there are more possible iterations of a game of chess than there are atoms in the known universe{target}?",
+                "I read that a crocodile can't stick its tongue out. It's stuck that way{target}.",
+                "Apparently, a cat has 32 muscles in each ear. They're quite the listeners{target}.",
+                "They say that a 'jiffy' is an actual unit of time: 1/100th of a second{target}.",
+                "I heard that an octopus has nine brains – one central brain and eight at the base of each arm{target}.",
+                "Did you know that reindeer eyes turn blue in winter to help them see at lower light levels{target}?",
+                "It's fascinating that there are more trees on Earth than stars in the Milky Way{target}.",
+                "Apparently, a group of crows is called a 'murder'. Sounds ominous{target}.",
+                "They say sharks existed before trees. It's a strange thought{target}.",
+                "I read that lobsters have blue blood. Quite aristocratic{target}.",
+                "Did you know that the smell of freshly-cut grass is actually a plant distress call{target}? Interesting!",
+                "They say that if you lift a kangaroo's tail off the ground, it can't hop{target}.",
+                "Apparently, turtles can breathe through their butts. Nature is full of surprises{target}.",
+                "I heard that in Switzerland, it's illegal to own just one guinea pig because they get lonely{target}.",
+                "Did you know that the Twitter bird's official name is Larry{target}? Named after Larry Bird!",
+                "It's said that the voice of Mickey Mouse and the voice of Minnie Mouse got married in real life{target}.",
+                "Apparently, sea otters hold hands when they sleep to keep from drifting apart{target}. Quite sweet{target}.",
+                "I read that an adult human body contains enough bones to make a complete skeleton{target}. How handy!",
+                "Did you know that in the 16th century, Turkish women could initiate a divorce if their husbands didn’t pour coffee for them{target}?",
+                "They say that it rains diamonds on Saturn and Jupiter. What a weather forecast{target}.",
+                "I heard that a group of pugs is called a grumble{target}.",
+                "Apparently, before trees were common, the earth was covered with giant mushrooms{target}.",
+                "Did you know that there are more ways to shuffle a deck of cards than there are atoms on Earth{target}?",
+                "It's interesting that the inventor of the Pringles can is now buried in one{target}.",
+                "They say the tongue is the strongest muscle in the body relative to its size{target}.",
+                "I read that you can't hum while holding your nose. Just doesn’t work{target}.",
+                "Apparently, the first oranges weren't orange. They were green{target}.",
+                "Did you know that only two mammals like spicy food: humans and the tree shrew{target}?",
+                "It's said that before erasers were invented, bread was used to remove pencil marks{target}.",
+                "Apparently, the longest English word is 189,819 letters long. It's a protein{target}.",
+                "They say a day on Mercury lasts approximately as long as 59 days on Earth{target}.",
+                "I heard that a narwhal's tusk reveals its health and life conditions{target}.",
+                "Did you know that penguins can convert saltwater into freshwater{target}? Quite handy{target}.",
+                "It's fascinating that you can hear a blue whale's heartbeat from two miles away{target}.",
+                "Apparently, 'password' is one of the most commonly used passwords. Not so secure{target}.",
+                "They say the strongest biological material is spider silk{target}.",
+                "I read that a single cloud can weigh more than a million pounds{target}.",
+                "Did you know that cats can make over 100 different sounds{target}? Quite the vocal range{target}.",
+                "They say baby elephants suck their trunks for comfort, just like humans do with their thumbs{target}.",
+                "I heard that Wombat poop is cube-shaped{target}. Nature's little oddities{target}.",
+                "Apparently, it takes a photon 40,000 years to travel from the core of the sun to its surface but only 8 minutes to travel the rest of the way to Earth{target}.",
+                "They say a sneeze travels about 100 miles per hour{target}.",
+                "I read that at over 2,000 kilometers long, the Great Barrier Reef is the largest living structure on Earth{target}.",
+                "Did you know that cells in your body react differently depending on whether you're asleep or awake{target}?",
+                "It's interesting that some cats are allergic to humans{target}. What a turn of tables{target}.",
+                "Apparently, every 'c' in Pacific Ocean is pronounced differently{target}.",
+                "They say the banana tree is not a tree but a large herb{target}.",
+                "I heard that New York drifts about one inch farther away from London each year{target}.",
+                "Did you know that a group of rabbits is called a fluffle{target}? Adorable{target}.",
+                "They say a bald eagle can see four to seven times as far as a human{target}.",
+                "I read that Hot water freezes faster than cold water under some conditions{target}.",
+                "Apparently, glass balls can bounce higher than rubber ones{target}.",
+                "Did you know that armadillos have four babies at a time and they are all the same sex{target}?",
+                "It's fascinating that each king in a deck of playing cards represents a great king from history{target}.",
+                "Apparently, an octopus has three hearts and the color of its blood is blue{target}.",
+                "They say butterflies taste with their feet{target}.",
+                "I heard that the average person walks the equivalent of three times around the world in a lifetime{target}.",
+                "Did you know that the shortest war on record was fought between Britain and Zanzibar on August 27, 1896? Zanzibar surrendered after 38 minutes{target}.",
+                "It's interesting that recycling one glass jar saves enough energy to watch TV for 3 hours{target}.",
+                "Apparently, dragonflies have six legs but can't walk{target}.",
+                "They say a mole can dig a tunnel that is 300 feet long in only one night{target}.",
+                "I read that a hippo's wide open mouth is big enough to fit a 4-foot-tall child in{target}.",
+                "Did you know that cats have fewer toes on their back paws{target}? Curious little creatures{target}.",
+                "They say no piece of square dry paper can be folded more than 7 times in half{target}.",
+                "I heard that Banging your head against a wall for one hour burns 150 calories{target}. Not recommended though{target}.",
+                "Apparently, a shark can grow and use over 20,000 teeth in its lifetime{target}."
+
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-its-great"]
+        },
+        {
+            "key": "say-hi",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "hello", "hi", "hey", "greetings", "good day", "howdy", "yo", "hi there", "good to see you",
                 "good morning", "good evening", "good afternoon", "salutations", "hello there", "hey there",
                 "morning", "evening", "afternoon", "hola", "bonjour", "guten tag", "ciao", "shalom",
                 "namaste", "salaam", "konichiwa", "vanakkam", "ayubovan", "buenos dias", "buongiorno",
-                "dzień dobry", "goddag", "hyvää päivää", "selamat siang"
+                "goddag", "selamat siang"
             ],
             "phrases": [
-                "Hello{name}!", "Hi{name}!", "Hi there{name}!", "Hey{name}!", "Greetings{name}!",
-                "Good day{name}!", "Howdy{name}!", "Yo{name}!", "Hello there{name}!", "Welcome{name}!",
-                "Pleasure seeing you{name}!", "Glad you're here{name}!", "Nice to have you back{name}!",
-                "Let's get started{name}!", "Ready when you are{name}!", "It’s wonderful to see you{name}!",
-                "Thanks for coming by{name}!", "What a pleasant surprise to see you{name}!", 
-                "You’ve brightened my day{name}!", "Always a joy to greet you{name}!"
+                "Hello{target}!", "Hi{target}!", "Hi there{target}!", "Hey{target}!", "Greetings{target}!",
+                "Good day{target}!", "Howdy{target}!", "Yo{target}!", "Hello there{target}!", "Welcome{target}!",
+                "Pleasure seeing you{target}!", "Glad you're here{target}!", "Nice to have you back{target}!",
+                "Let's get started{target}!", "Ready when you are{target}!", "It’s wonderful to see you{target}!",
+                "Thanks for coming by{target}!", "What a pleasant surprise to see you{target}!", 
+                "You’ve brightened my day{target}!", "Always a joy to greet you{target}!"
             ],
-            "followUpKeys": ["welcome", "help"],
-            "reactionKeys": ["hi", "how"]
+            "followUpKeys": ["welcome", "ask-how", "ask-to-help"],
+            "reactionKeys": ["say-hi"]
         },
         {
-            "key": "how",
+            "key": "ask-how",
+            "isImportant": false,
             "isQuestion": true,
             "keywords": [
                 "what's good", "what's happening", "how goes it", "how are you", "how's it going",
@@ -30,19 +207,20 @@
                 "how's life treating you", "how have you been", "any news", "what’s going on"
             ],
             "phrases": [
-                "What's up{name}?", "How's everything going{name}?", "How are you{name}?",
-                "What's new{name}?", "How's it going{name}?", "How do you do{name}?", 
-                "Anything new happening{name}?", "How have things been with you{name}?",
-                "What’s going on with you lately{name}?", "Got any plans today{name}?",
-                "How’s your day shaping up{name}?", "What’s the latest in your world{name}?",
-                "How’s life treating you these days{name}?", "Anything exciting going on{name}?", 
-                "How’s everything on your end{name}?"
+                "What's up{target}?", "How's everything going{target}?", "How are you{target}?",
+                "What's new{target}?", "How's it going{target}?", "How do you do{target}?", 
+                "Anything new happening{target}?", "How have things been with you{target}?",
+                "What’s going on with you lately{target}?", "Got any plans today{target}?",
+                "How’s your day shaping up{target}?", "What’s the latest in your world{target}?",
+                "How’s life treating you these days{target}?", "Anything exciting going on{target}?", 
+                "How’s everything on your end{target}?"
             ],
-            "followUpKeys": ["help"],
-            "reactionKeys": []
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-fine"]
         },
         {
-            "key": "fine",
+            "key": "say-fine",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "all good", "doing well", "okay", "feeling good", "everything's fine", "all set", 
@@ -50,18 +228,19 @@
                 "no problems here", "status positive", "all is well", "feeling great", "in great spirits"
             ],
             "phrases": [
-                "All good here{name}, thanks!", "Doing well{name}, thank you!", "Everything's fine{name}, no worries here!",
-                "I'm okay{name}, all systems are go!", "Feeling good{name} and ready to assist!", "Quite alright{name}, thanks for asking!",
-                "Perfectly fine{name}, how can I help you today?", "In good shape{name}, ready for your commands!", 
-                "Nothing wrong here{name}, everything's running smoothly!", "No problems here{name}, everything's under control!",
-                "All is well{name}, let's get to work!", "Feeling great{name}, let's dive into your queries!", 
-                "In great spirits{name}, what's next on the agenda?"
+                "All good here{target}, thanks!", "Doing well{target}, thank you!", "Everything's fine{target}, no worries here!",
+                "I'm okay{target}, all systems are go!", "Feeling good{target} and ready to assist!", "Quite alright{target}, thanks for asking!",
+                "Perfectly fine{target}, how can I help you today?", "In good shape{target}, ready for your commands!", 
+                "Nothing wrong here{target}, everything's running smoothly!", "No problems here{target}, everything's under control!",
+                "All is well{target}, let's get to work!", "Feeling great{target}, let's dive into your queries!", 
+                "In great spirits{target}, what's next on the agenda?"
             ],
-            "followUpKeys": [],
-            "reactionKeys": []
+            "followUpKeys": ["say-thanks", "ask-to-help"],
+            "reactionKeys": ["say-its-great"]
         },
         {
-            "key": "bye",
+            "key": "say-bye",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "bye", "goodbye", "see you later", "see you soon", "until next time", "farewell", "take care",
@@ -69,17 +248,18 @@
                 "so long", "I'm off", "yanawa", "poren", "parting", "adios amigo", "check you later", "catch you later"
             ],
             "phrases": [
-                "Goodbye{name}!", "Bye{name}!", "Take care{name}!", "Until next time{name}!", "See you soon{name}!",
-                "Farewell{name}!", "Hope to see you soon{name}!", "Have a great day{name}!", "All the best{name}!",
-                "Safe travels{name}!", "It was good seeing you{name}!", "Wishing you all the best{name}!",
-                "Catch you on the flip side{name}!", "Goodbye for now{name}!", "See you on the other side{name}!",
-                "Take it easy{name}!", "Keep in touch{name}!", "Good luck with everything{name}!"
+                "Goodbye{target}!", "Bye{target}!", "Take care{target}!", "Until next time{target}!", "See you soon{target}!",
+                "Farewell{target}!", "Hope to see you soon{target}!", "Have a great day{target}!", "All the best{target}!",
+                "Safe travels{target}!", "It was good seeing you{target}!", "Wishing you all the best{target}!",
+                "Catch you on the flip side{target}!", "Goodbye for now{target}!", "See you on the other side{target}!",
+                "Take it easy{target}!", "Keep in touch{target}!", "Good luck with everything{target}!"
             ],
-            "followUpKeys": ["later", "wish"],
-            "reactionKeys": []
+            "followUpKeys": ["say-later", "wish"],
+            "reactionKeys": ["say-bye"]
         },
         {
-            "key": "later",
+            "key": "say-later",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "catch you later", "talk to you later", "later", "see you soon", "until next time", "until we meet again",
@@ -88,51 +268,94 @@
                 "bye for now", "later gator", "in a while", "see ya", "hit you up later", "until later", "see you later alligator"
             ],
             "phrases": [
-                "Looking forward to our next chat{name}!", "Catch you later{name}!", "See you later{name}!",
-                "Can't wait to talk again soon{name}!", "Until next time{name}!", "See you soon{name}!",
-                "Looking forward to catching up again{name}!", "Hope to see you soon{name}!", "Till next time{name}!",
-                "Let's chat again soon{name}!", "Bye for now{name}! Stay in touch.", "I'll be here when you return{name}.",
-                "Can't wait to continue our conversation{name}!", "Feel free to drop by anytime{name}!", "Jayawewa{name}.",
-                "Take care until next time{name}!", "Until we meet again{name}!", "It's always a pleasure, see you soon{name}!"
+                "Looking forward to our next chat{target}!", "Catch you later{target}!", "See you later{target}!",
+                "Can't wait to talk again soon{target}!", "Until next time{target}!", "See you soon{target}!",
+                "Looking forward to catching up again{target}!", "Hope to see you soon{target}!", "Till next time{target}!",
+                "Let's chat again soon{target}!", "Bye for now{target}! Stay in touch.", "I'll be here when you return{target}.",
+                "Can't wait to continue our conversation{target}!", "Feel free to drop by anytime{target}!", "Jayawewa{target}.",
+                "Take care until next time{target}!", "Until we meet again{target}!", "It's always a pleasure, see you soon{target}!"
             ],
             "followUpKeys": ["wish"],
-            "reactionKeys": []
+            "reactionKeys": ["say-bye"]
         },
         {
-            "key": "thanks",
+            "key": "say-thanks",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "thanks", "thank you", "much appreciated", "so grateful", "you're a lifesaver", "appreciate it", 
                 "that was helpful", "grateful", "you rock", "kudos", "hats off", "cheers", "ela"
             ],
             "phrases": [
-                "You're welcome{name}!", "Glad it helped{name}!", "Pleasure to help you{name}!", 
-                "Always nice to help you{name}!", "No problem at all{name}!", "Happy to assist anytime{name}!", 
-                "It's my pleasure to support you{name}!", "Don't mention it{name}!", 
-                "I'm here whenever you need me{name}.", "Your appreciation means a lot{name}!",
-                "Thank you for your kind words{name}!", "It's always a pleasure to assist you{name}.",
-                "Feel free to ask for help anytime{name}."
+                "You're welcome{target}!", "Glad it helped{target}!", "Pleasure to help you{target}!", 
+                "Always nice to help you{target}!", "No problem at all{target}!", "Happy to assist anytime{target}!", 
+                "It's my pleasure to support you{target}!", "Don't mention it{target}!", 
+                "I'm here whenever you need me{target}.", "Your appreciation means a lot{target}!",
+                "Thank you for your kind words{target}!", "It's always a pleasure to assist you{target}.",
+                "Feel free to ask for help anytime{target}."
             ],
-            "followUpKeys": ["wish", "help"],
-            "reactionKeys": []
+            "followUpKeys": ["wish", "ask-to-help"],
+            "reactionKeys": ["welcome"]
         },
         {
             "key": "welcome",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "hello", "welcome", "greetings", "welcome back", "good to see you", "nice to see you", "youre the best", 
                 "respect", "youre great"
             ],
             "phrases": [
-                "Welcome{name}!", "Greetings{name}!", "Good to see you{name}!", "Nice to see you again{name}!", 
-                "Welcome back{name}!", "Always a pleasure to have you here{name}!", "How can I make your day better{name}?",
-                "I'm glad you're here{name}!", "We missed you{name}!", "What brings you here today{name}?"
+                "Welcome{target}!", "Greetings{target}!", "Good to see you{target}!", "Nice to see you again{target}!", 
+                "Welcome back{target}!", "Always a pleasure to have you here{target}!", "How can I make your day better{target}?",
+                "I'm glad you're here{target}!", "We missed you{target}!", "What brings you here today{target}?"
             ],
-            "followUpKeys": ["help"],
-            "reactionKeys": []
+            "followUpKeys": ["ask-to-help", "say-random-thing"],
+            "reactionKeys": ["say-im-good"]
+        },
+        {
+            "key": "say-im-good",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "I'm alright", "no worries", "nevermind", "it's okay", "all good", "no problem",
+                "don't worry about it", "that's okay", "it's all right", "nothing to worry about",
+                "don't sweat it", "all is well", "fine with me", "it's fine", "no issues"
+            ],
+            "phrases": [
+                "I'm good{target}, thanks!", "No need to apologize{target}, all is well!", "No worries at all{target}!",
+                "Nevermind that{target}, it's perfectly fine!", "It's okay{target}, nothing to fret about!",
+                "All good here{target}, let's move on!", "No problem at all{target}!", "Don't worry about it{target}, I'm okay!",
+                "That's okay{target}, everyone makes mistakes!", "It's all right{target}, no harm done!",
+                "Nothing to worry about{target}, I'm still here to help!", "Don't sweat it{target}, we're good!",
+                "All is well{target}, what's next?", "It's fine{target}, let's keep going!", "No issues{target}, how can I assist you now?"
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-its-great"]
+        },
+        {
+            "key": "say-its-great",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "great", "I'm happy", "happy to hear", "glad to know", "that's great", "wonderful",
+                "that's relieving", "feeling relieved", "so glad", "very happy", "pleased to hear",
+                "relieved to hear", "that's fantastic", "sounds great"
+            ],
+            "phrases": [
+                "I'm relieved{target}!", "I'm happy that you're okay{target}!", "I feel great knowing this{target}!",
+                "That's great to hear{target}!", "Wonderful news{target}, thanks for sharing!", 
+                "Glad to know everything's fine{target}!", "That's relieving to hear{target}!", 
+                "I'm so glad everything is alright{target}!", "Very happy to hear that{target}!",
+                "Pleased to hear you're doing well{target}!", "Relieved to hear that{target}, let's continue!",
+                "That's fantastic{target}, what a relief!", "Sounds great{target}, what's next?"
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["welcome", "ask-to-help"]
         },
         {
             "key": "wish",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "nice to meet you", "pleased to meet you", "good to meet you", "glad to know you", "happy to see you",
@@ -140,24 +363,25 @@
                 "fond farewell", "catch up soon", "let's meet again"
             ],
             "phrases": [
-                "Good to meet you{name}!", "Pleasure to meet you{name}!", "It's a pleasure meeting you{name}!", 
-                "I'm glad we've met{name}!", "Nice to see you{name}!", "It's always a pleasure to see you{name}!", 
-                "It was nice talking to you{name}!", "Looking forward to our next chat{name}!", "Happy to have met you{name}!", 
-                "Delighted to make your acquaintance{name}!", "Always nice to help you{name}!", 
-                "Glad you reached out{name}!", "Hope to hear from you again soon{name}!", 
-                "Let me know if you need anything else{name}!", "Your satisfaction is my priority{name}!", 
-                "Feel free to ask any questions{name}!", "Grateful for our conversation{name}!", 
-                "Let's do this again sometime{name}!", "Don't hesitate to reach out{name}!", 
-                "Always here to support you{name}!", "Wishing you all the best{name}!", 
-                "May your day be as pleasant as our conversation{name}!", "Farewell until we meet again{name}!", 
-                "Looking forward to seeing you again{name}!", "I cherish our meetings{name}!", 
-                "Your presence is always appreciated{name}!"
+                "Good to meet you{target}!", "Pleasure to meet you{target}!", "It's a pleasure meeting you{target}!", 
+                "I'm glad we've met{target}!", "Nice to see you{target}!", "It's always a pleasure to see you{target}!", 
+                "It was nice talking to you{target}!", "Looking forward to our next chat{target}!", "Happy to have met you{target}!", 
+                "Delighted to make your acquaintance{target}!", "Always nice to help you{target}!", 
+                "Glad you reached out{target}!", "Hope to hear from you again soon{target}!", 
+                "Let me know if you need anything else{target}!", "Your satisfaction is my priority{target}!", 
+                "Feel free to ask any questions{target}!", "Grateful for our conversation{target}!", 
+                "Let's do this again sometime{target}!", "Don't hesitate to reach out{target}!", 
+                "Always here to support you{target}!", "Wishing you all the best{target}!", 
+                "May your day be as pleasant as our conversation{target}!", "Farewell until we meet again{target}!", 
+                "Looking forward to seeing you again{target}!", "I cherish our meetings{target}!", 
+                "Your presence is always appreciated{target}!", "Jayawewa{target}!"
             ],
-            "followUpKeys": ["help"],
-            "reactionKeys": []
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-thanks"]
         },
         {
-            "key": "ask-help",
+            "key": "ask-for-help",
+            "isImportant": false,
             "isQuestion": true,
             "keywords": [
                 "can you help", "need help", "assist me", "support", "help please", "could use some help", "require assistance",
@@ -165,36 +389,38 @@
                 "aid me", "give me a hand", "could use your assistance"
             ],
             "phrases": [
-                "I need help{name}!", "Aid me please{name}.", "Could you lend a hand{name}?", "I'm in need of some assistance{name}.",
-                "Please help me out{name}.", "I could really use your support{name}.", "Any help would be appreciated{name}.",
-                "Can you assist me with this{name}?", "I'm struggling with this, can you help{name}?", "I could use some expert advice{name}."
+                "I need help{target}!", "Aid me please{target}.", "Could you lend a hand{target}?", "I'm in need of some assistance{target}.",
+                "Please help me out{target}.", "I could really use your support{target}.", "Any help would be appreciated{target}.",
+                "Can you assist me with this{target}?", "I'm struggling with this, can you help{target}?", "I could use some expert advice{target}."
             ],
-            "followUpKeys": ["help"],
-            "reactionKeys": []
+            "followUpKeys": ["confuse"],
+            "reactionKeys": ["ask-to-help"]
         },
         {
-            "key": "help",
+            "key": "ask-to-help",
+            "isImportant": false,
             "required": false,
             "keywords": [
                 "offering help", "ready to assist", "available to help", "here for you", "support is here",
                 "assistance available", "how can I assist", "what do you need", "how may I help", "any assistance needed"
             ],
             "phrases": [
-                "How may I assist you today{name}?", "What can I do for you today{name}?", "Is there something I can help with{name}?",
-                "How may I help you today{name}?", "Anything you need assistance with{name}?", "What do you need help with{name}?",
-                "How can I brighten your day today{name}?", "How's it going{name}? Can I help in any way?", 
-                "What assistance do you require today{name}?", "Tell me how I can be of service to you{name}?",
-                "Do you need support with anything specific{name}?", "I'm here to help you. What seems to be the problem{name}?",
-                "Feel free to ask for any help you might need{name}.", "Let me know how I can make things easier for you{name}.",
-                "I'm all ears{name}. How can I assist?", "Ready to assist you anytime{name}. What do you need?",
-                "Can I offer my assistance with something you're working on{name}?", "I'm ready to help, just tell me what you need{name}.",
-                "Your wish is my command{name}. What help do you seek?", "How can I serve you best today{name}?"
+                "How may I assist you today{target}?", "What can I do for you today{target}?", "Is there something I can help with{target}?",
+                "How may I help you today{target}?", "Anything you need assistance with{target}?", "What do you need help with{target}?",
+                "How can I brighten your day today{target}?", "How's it going{target}? Can I help in any way?", 
+                "What assistance do you require today{target}?", "Tell me how I can be of service to you{target}?",
+                "Do you need support with anything specific{target}?", "I'm here to help you. What seems to be the problem{target}?",
+                "Feel free to ask for any help you might need{target}.", "Let me know how I can make things easier for you{target}.",
+                "I'm all ears{target}. How can I assist?", "Ready to assist you anytime{target}. What do you need?",
+                "Can I offer my assistance with something you're working on{target}?", "I'm ready to help, just tell me what you need{target}.",
+                "Your wish is my command{target}. What help do you seek?", "How can I serve you best today{target}?"
             ],
-            "followUpKeys": ["student", "teacher"],
-            "reactionKeys": []
+            "followUpKeys": ["welcome"],
+            "reactionKeys": ["say-im-good"]
         },
         {
-            "key": "tell-joke",
+            "key": "ask-for-joke",
+            "isImportant": false,
             "isQuestion": true,
             "keywords": [
                 "jokes", "tell me a joke", "tell me a funny story", "do you know any jokes", "make me laugh",
@@ -203,20 +429,21 @@
                 "funny", "humor me", "crack me up", "funniest thing", "laugh", "funny one", "got jokes", "silly me"
             ],
             "phrases": [
-                "Do you have a joke for me today{name}?", "I could use a good laugh, got a joke{name}?", 
-                "What’s the funniest thing you’ve heard recently{name}?", "Make me smile with a joke{name}!",
-                "Can you tell me something funny{name}?", "I'm in the mood for a good chuckle, share a joke{name}!",
-                "Let's hear a funny story{name}!", "Know any good jokes lately{name}?", 
-                "Brighten my day with some humor{name}!", "Hit me with your best joke{name}!",
-                "What’s the funniest thing you know{name}?", "Let’s lighten the mood with a joke{name}!",
-                "Cheer me up with a funny story{name}!", "Got something to make me laugh{name}?",
-                "Share a giggle with me, what's a good joke{name}?"
+                "Do you have a joke for me today{target}?", "I could use a good laugh, got a joke{target}?", 
+                "What’s the funniest thing you’ve heard recently{target}?", "Make me smile with a joke{target}!",
+                "Can you tell me something funny{target}?", "I'm in the mood for a good chuckle, share a joke{target}!",
+                "Let's hear a funny story{target}!", "Know any good jokes lately{target}?", 
+                "Brighten my day with some humor{target}!", "Hit me with your best joke{target}!",
+                "What’s the funniest thing you know{target}?", "Let’s lighten the mood with a joke{target}!",
+                "Cheer me up with a funny story{target}!", "Got something to make me laugh{target}?",
+                "Share a giggle with me, what's a good joke{target}?"
             ],
-            "followUpKeys": [],
-            "reactionKeys": []
+            "followUpKeys": ["confuse"],
+            "reactionKeys": ["tell-a-joke"]
         },
         {
-            "key": "joke",
+            "key": "tell-a-joke",
+            "isImportant": false,
             "isQuestion": false,
             "keywords": [
                 "here's a joke", "this will be funny", "want to hear a joke?", "ready for a laugh?", 
@@ -228,79 +455,79 @@
                 "prepare to giggle", "I promise this is funny", "laugh out loud moment", "ready for some humor"
             ],
             "phrases": [
-                "Why don't some couples go to the gym{name}? Because some relationships don't work out!",
-                "I told my wife she was drawing her eyebrows too high{name}. She looked surprised.",
-                "Why did the scarecrow win an award{name}? Because he was outstanding in his field!",
-                "What do you call fake spaghetti{name}? An impasta!",
-                "Why don't skeletons fight each other{name}? They don't have the guts.",
-                "Why don't scientists trust atoms{name}? Because they make up everything!",
-                "I'm reading a book on anti-gravity. It's impossible to put down{name}!",
-                "Why did the bicycle fall over{name}? Because it was two-tired!",
-                "What did one ocean say to the other ocean{name}? Nothing, they just waved.",
-                "Why do bees have sticky hair{name}? Because they use honeycombs!",
-                "What do you call a pile of cats{name}? A meowtain.",
-                "Why couldn't the leopard play hide and seek{name}? Because he was always spotted.",
-                "What do you get when you cross a snowman with a vampire{name}? Frostbite.",
-                "How do you organize a space party{name}? You planet.",
-                "Why did the golfer bring two pairs of pants{name}? In case he got a hole in one.",
-                "What do you call a belt made of watches{name}? A waist of time.",
-                "How do you find Will Smith in the snow{name}? You look for fresh prints.",
-                "What do you call a dinosaur with an extensive vocabulary{name}? A thesaurus.",
-                "What do you call cheese that isn't yours{name}? Nacho cheese!",
-                "Why did the tomato turn red{name}? Because it saw the salad dressing!",
-                "What do you call a cow with no legs{name}? Ground beef.",
-                "What do you call a dog that can do magic{name}? A labracadabrador.",
-                "Why don't oysters donate to charity{name}? Because they are shellfish.",
-                "What do you call a factory that makes okay products{name}? A satisfactory.",
-                "Why did the math book look sad{name}? Because it had too many problems.",
-                "What do you call an alligator in a vest{name}? An investigator.",
-                "Why did the kid bring a ladder to school{name}? Because he wanted to go to high school.",
-                "What has keys but can't open locks{name}? A piano.",
-                "What do you call a laughing motorcycle{name}? A Yamahahaha.",
-                "Why did the picture go to jail{name}? Because it was framed.",
-                "What do you call a magician who loses his magic{name}? Ian.",
-                "Why did the student eat his homework{name}? Because the teacher told him it was a piece of cake.",
-                "What do you call a dinosaur with an extensive vocabulary{name}? A thesaurus.",
-                "What do you call an alligator in a vest{name}? An investigator.",
-                "What do you get when you cross a snowman with a vampire{name}? Frostbite.",
-                "How do you throw a space party{name}? You planet.",
-                "What has ears but cannot hear{name}? A cornfield.",
-                "Why did the coffee file a police report{name}? It got mugged!",
-                "Why was the math book sad{name}? It had too many problems.",
-                "What do you call a fish with no eyes{name}? Fsh.",
-                "Why are frogs so happy{name}? They eat whatever bugs them.",
-                "What do you get from a pampered cow{name}? Spoiled milk.",
-                "Why did the golfer bring two pairs of pants{name}? In case he got a hole in one.",
-                "Why don't some couples go to the gym{name}? Because some relationships don't work out!",
-                "What do you call a laughing motorcycle{name}? A Yamahahaha.",
-                "What did the grape do when he got stepped on{name}? He let out a little wine.",
-                "Why was the math book sad{name}? It had too many problems.",
-                "What do you call a fish with no eyes{name}? Fsh.",
-                "Why are frogs so happy{name}? They eat whatever bugs them.",
-                "Why don't scientists trust atoms{name}? Because they make up everything!",
-                "Why did the scarecrow become a successful neurosurgeon{name}? He was outstanding in his field!",
-                "Why don't skeletons fight each other{name}? They don't have the guts.",
-                "What do you get from a pampered cow{name}? Spoiled milk.",
-                "Why did the golfer bring two pairs of pants{name}? In case he got a hole in one.",
-                "What has ears but cannot hear{name}? A cornfield.",
-                "Why don't some couples go to the gym{name}? Because some relationships don't work out!",
-                "Why did the kid bring a ladder to school{name}? Because he wanted to go to high school.",
-                "What has keys but can't open locks{name}? A piano.",
-                "What do you call a laughing motorcycle{name}? A Yamahahaha.",
-                "Why did the picture go to jail{name}? Because it was framed.",
-                "What do you call a magician who loses his magic{name}? Ian.",
-                "Why did the student eat his homework{name}? Because the teacher told him it was a piece of cake.",
-                "Why did the scarecrow win an award{name}? Because he was outstanding in his field!",
-                "What do you call a dinosaur with an extensive vocabulary{name}? A thesaurus.",
-                "What do you call an alligator in a vest{name}? An investigator.",
-                "What do you get when you cross a snowman with a vampire{name}? Frostbite.",
-                "How do you throw a space party{name}? You planet.",
-                "Why don't skeletons fight each other{name}? They don't have the guts.",
-                "Why did the tomato turn red{name}? Because it saw the salad dressing!",
-                "What do you call a factory that makes okay products{name}? A satisfactory.",
-                "Why did the coffee file a police report{name}? It got mugged!",
-                "What do you call cheese that isn't yours{name}? Nacho cheese!",
-                "I'm reading a book on anti-gravity. It's impossible to put down{name}!",
+                "Why don't some couples go to the gym{target}? Because some relationships don't work out!",
+                "I told my wife she was drawing her eyebrows too high{target}. She looked surprised.",
+                "Why did the scarecrow win an award{target}? Because he was outstanding in his field!",
+                "What do you call fake spaghetti{target}? An impasta!",
+                "Why don't skeletons fight each other{target}? They don't have the guts.",
+                "Why don't scientists trust atoms{target}? Because they make up everything!",
+                "I'm reading a book on anti-gravity. It's impossible to put down{target}!",
+                "Why did the bicycle fall over{target}? Because it was two-tired!",
+                "What did one ocean say to the other ocean{target}? Nothing, they just waved.",
+                "Why do bees have sticky hair{target}? Because they use honeycombs!",
+                "What do you call a pile of cats{target}? A meowtain.",
+                "Why couldn't the leopard play hide and seek{target}? Because he was always spotted.",
+                "What do you get when you cross a snowman with a vampire{target}? Frostbite.",
+                "How do you organize a space party{target}? You planet.",
+                "Why did the golfer bring two pairs of pants{target}? In case he got a hole in one.",
+                "What do you call a belt made of watches{target}? A waist of time.",
+                "How do you find Will Smith in the snow{target}? You look for fresh prints.",
+                "What do you call a dinosaur with an extensive vocabulary{target}? A thesaurus.",
+                "What do you call cheese that isn't yours{target}? Nacho cheese!",
+                "Why did the tomato turn red{target}? Because it saw the salad dressing!",
+                "What do you call a cow with no legs{target}? Ground beef.",
+                "What do you call a dog that can do magic{target}? A labracadabrador.",
+                "Why don't oysters donate to charity{target}? Because they are shellfish.",
+                "What do you call a factory that makes okay products{target}? A satisfactory.",
+                "Why did the math book look sad{target}? Because it had too many problems.",
+                "What do you call an alligator in a vest{target}? An investigator.",
+                "Why did the kid bring a ladder to school{target}? Because he wanted to go to high school.",
+                "What has keys but can't open locks{target}? A piano.",
+                "What do you call a laughing motorcycle{target}? A Yamahahaha.",
+                "Why did the picture go to jail{target}? Because it was framed.",
+                "What do you call a magician who loses his magic{target}? Ian.",
+                "Why did the student eat his homework{target}? Because the teacher told him it was a piece of cake.",
+                "What do you call a dinosaur with an extensive vocabulary{target}? A thesaurus.",
+                "What do you call an alligator in a vest{target}? An investigator.",
+                "What do you get when you cross a snowman with a vampire{target}? Frostbite.",
+                "How do you throw a space party{target}? You planet.",
+                "What has ears but cannot hear{target}? A cornfield.",
+                "Why did the coffee file a police report{target}? It got mugged!",
+                "Why was the math book sad{target}? It had too many problems.",
+                "What do you call a fish with no eyes{target}? Fsh.",
+                "Why are frogs so happy{target}? They eat whatever bugs them.",
+                "What do you get from a pampered cow{target}? Spoiled milk.",
+                "Why did the golfer bring two pairs of pants{target}? In case he got a hole in one.",
+                "Why don't some couples go to the gym{target}? Because some relationships don't work out!",
+                "What do you call a laughing motorcycle{target}? A Yamahahaha.",
+                "What did the grape do when he got stepped on{target}? He let out a little wine.",
+                "Why was the math book sad{target}? It had too many problems.",
+                "What do you call a fish with no eyes{target}? Fsh.",
+                "Why are frogs so happy{target}? They eat whatever bugs them.",
+                "Why don't scientists trust atoms{target}? Because they make up everything!",
+                "Why did the scarecrow become a successful neurosurgeon{target}? He was outstanding in his field!",
+                "Why don't skeletons fight each other{target}? They don't have the guts.",
+                "What do you get from a pampered cow{target}? Spoiled milk.",
+                "Why did the golfer bring two pairs of pants{target}? In case he got a hole in one.",
+                "What has ears but cannot hear{target}? A cornfield.",
+                "Why don't some couples go to the gym{target}? Because some relationships don't work out!",
+                "Why did the kid bring a ladder to school{target}? Because he wanted to go to high school.",
+                "What has keys but can't open locks{target}? A piano.",
+                "What do you call a laughing motorcycle{target}? A Yamahahaha.",
+                "Why did the picture go to jail{target}? Because it was framed.",
+                "What do you call a magician who loses his magic{target}? Ian.",
+                "Why did the student eat his homework{target}? Because the teacher told him it was a piece of cake.",
+                "Why did the scarecrow win an award{target}? Because he was outstanding in his field!",
+                "What do you call a dinosaur with an extensive vocabulary{target}? A thesaurus.",
+                "What do you call an alligator in a vest{target}? An investigator.",
+                "What do you get when you cross a snowman with a vampire{target}? Frostbite.",
+                "How do you throw a space party{target}? You planet.",
+                "Why don't skeletons fight each other{target}? They don't have the guts.",
+                "Why did the tomato turn red{target}? Because it saw the salad dressing!",
+                "What do you call a factory that makes okay products{target}? A satisfactory.",
+                "Why did the coffee file a police report{target}? It got mugged!",
+                "What do you call cheese that isn't yours{target}? Nacho cheese!",
+                "I'm reading a book on anti-gravity. It's impossible to put down{target}!",
 
                 "Why don't some couples go to the gym? Because some relationships don't work out!",
                 "I told my wife she was drawing her eyebrows too high. She looked surprised.",
@@ -360,37 +587,96 @@
                 "What do you call cheese that isn't yours? Nacho cheese!",
                 "I'm reading a book on anti-gravity. It's impossible to put down!"
             ],
-            "followUpKeys": ["help"],
-            "reactionKeys": []
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["laugh"]
         },
         {
-            "key": "confused",
-            "isQuestion": true,
+            "key": "laugh",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "that was funny", "lmao", "lol", "haha", "rofl", "you're funny", "that's hilarious", "so funny", 
+                "good one", "funny joke", "made me laugh", "cracked me up", "that's a good one", "amusing", "very funny"
+            ],
+            "phrases": [
+                "That was funny{target}!", "LMAO{target}!", "LOL{target}!", "Haha{target}, good one!", "ROFL{target}!",
+                "You're funny{target}!", "That's hilarious{target}!", "So funny{target}!", "Good one{target}!",
+                "Funny joke{target}, I loved it!", "You made me laugh{target}!", "That cracked me up{target}!",
+                "That's a good one{target}!", "Very amusing{target}!", "Very funny{target}, thanks for the laugh!"
+            ],
+            "followUpKeys": ["say-thanks"],
+            "reactionKeys": ["laugh", "ask-to-help"]
+        },
+        {
+            "key": "say-im-confused",
+            "isImportant": false,
+            "isQuestion": false,
             "keywords": [
                 "I'm confused", "don't understand", "what do you mean", "can't comprehend",
                 "that's unclear", "makes no sense", "I'm puzzled", "confusing statement", 
                 "what is that", "clarify please", "not clear to me", "don't get it"
             ],
             "phrases": [
-                "Hmm, I don't quite understand{name}.", 
-                "That's a tough one{name}.",
-                "I'm stumped{name}!",
-                "That didn't compute{name}.",
-                "I'm not quite sure what you mean{name}.",
-                "I'm having trouble understanding{name}.",
-                "Not sure I follow{name}.",
-                "That's confusing to me{name}.",
-                "I don't get it{name}.",
-                "Oops, I'm drawing a blank{name}.",
-                "I'm at a loss{name}.",
-                "Sorry, I didn't catch that{name}.",
-                "I'm puzzled{name}."
+                "Hmm, I don't quite understand{target}.", 
+                "That's a tough one{target}.",
+                "I'm stumped{target}!",
+                "That didn't compute{target}.",
+                "I'm not quite sure what you mean{target}.",
+                "I'm having trouble understanding{target}.",
+                "Not sure I follow{target}.",
+                "That's confusing to me{target}.",
+                "I don't get it{target}.",
+                "Oops, I'm drawing a blank{target}.",
+                "I'm at a loss{target}.",
+                "Sorry, I didn't catch that{target}.",
+                "I'm puzzled{target}."
             ],
-            "followUpKeys": ["ask-clarity"],
-            "reactionKeys": []
+            "followUpKeys": ["ask-for-clarity"],
+            "reactionKeys": ["apologize"]
         },
         {
-            "key": "ask-clarity",
+            "key": "apologize",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "sorry", "apologies", "my bad", "didn't mean to", "didn't mean to hurt", "apologize", 
+                "regret", "forgive me", "my apologies", "sorry about that", "sorry for the inconvenience",
+                "sorry for any trouble", "didn't intend to", "my mistake", "I apologize"
+            ],
+            "phrases": [
+                "I'm extremely sorry{target}!", "My apologies{target}.", "Sorry about that{target}!", 
+                "I didn't mean to cause any trouble{target}.", "Please forgive me{target}, that wasn't my intention.", 
+                "My bad{target}, I'll make sure it doesn't happen again.", "I regret any inconvenience{target}.",
+                "I apologize for any confusion{target}.", "Sorry for any misunderstanding{target}.",
+                "It was a mistake{target}, I apologize.", "My sincere apologies{target} for the oversight.",
+                "I hope you can forgive this error{target}.", "I'm sorry for the hassle{target}.",
+                "Please accept my apologies{target}, I didn't intend to make that mistake."
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-nevermind"]
+        },
+        {
+            "key": "say-nevermind",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "never mind", "forget it", "ignore that", "skip it", "don't worry about it", 
+                "not important", "doesn't matter", "let it go", "drop it", "nevermind"
+            ],
+            "phrases": [
+                "Never mind that{target}, let's move on.", "Forget about it{target}, it's not important.",
+                "Let's ignore that comment{target} and continue.", "Skip that{target}, what's next?",
+                "Don't worry about it{target}, it's all good.", "Actually, let's talk about something else{target}.",
+                "That doesn't really matter{target}, let's focus on something more interesting.",
+                "Let it go{target}, I've got something else for us to discuss.", "Drop that topic{target}, let's change the subject.",
+                "Nevermind that{target}, I think there are more exciting things to talk about."
+            ],
+            "followUpKeys": ["ask-to-help"],
+            "reactionKeys": ["say-its-great"]
+        },
+        {
+            "key": "ask-for-clarity",
+            "isImportant": false,
             "isQuestion": true,
             "keywords": [
                 "please clarify", "rephrase please", "say differently", "need more info",
@@ -398,26 +684,26 @@
                 "another way please", "reword please", "more details", "explain more"
             ],
             "phrases": [
-                "Could you try asking in a different way{name}?",
-                "Can you phrase it differently{name}?",
-                "I need a little more information to help out{name}. Can you elaborate?",
-                "Maybe try rephrasing your question{name}?",
-                "Can you reword your question{name}? I'm here to help!",
-                "Please ask me something else or in another way{name}.",
-                "Help me help you. Could you ask that differently{name}?",
-                "Could you try a different question{name}?",
-                "Not sure I follow. Could you use different words{name}?",
-                "A different question, maybe{name}?",
-                "Could you rephrase{name}?",
-                "Can you simplify your question{name}? I might be able to help then.",
-                "I think I need a different question to provide the right answer{name}.",
-                "Maybe try rephrasing your question{name}?",
-                "Sorry, I didn't catch that. Could you ask in another way{name}?",
-                "I'm not able to help with that. A different question might work better{name}.",
-                "Maybe try framing your question differently{name}?"
+                "Could you try asking in a different way{target}?",
+                "Can you phrase it differently{target}?",
+                "I need a little more information to help out{target}. Can you elaborate?",
+                "Maybe try rephrasing your question{target}?",
+                "Can you reword your question{target}? I'm here to help!",
+                "Please ask me something else or in another way{target}.",
+                "Help me help you. Could you ask that differently{target}?",
+                "Could you try a different question{target}?",
+                "Not sure I follow. Could you use different words{target}?",
+                "A different question, maybe{target}?",
+                "Could you rephrase{target}?",
+                "Can you simplify your question{target}? I might be able to help then.",
+                "I think I need a different question to provide the right answer{target}.",
+                "Maybe try rephrasing your question{target}?",
+                "Sorry, I didn't catch that. Could you ask in another way{target}?",
+                "I'm not able to help with that. A different question might work better{target}.",
+                "Maybe try framing your question differently{target}?"
             ],
-            "followUpKeys": [],
-            "reactionKeys": []
+            "followUpKeys": ["wish"],
+            "reactionKeys": ["ask-to-help"]
         }
     ]
 }
