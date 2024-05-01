@@ -1,98 +1,185 @@
 {
     "actions":[
-       {
+        {
             "key": "hi",
-            "isOptional": true,
-            "triggers": [
-                "hello", "hi", "hey", "greetings", "good day", "howdy", "whats up", "yo", "hi there", "good to see you",
-                "good morning", "good evening", "good afternoon", "salutations", "whats good", "whats happening", "how goes it",
-                "how do you do", "whats new", "sup", "what up", "hello there", "hey there", "morning", "evening", "afternoon",
-                "hola", "bonjour", "guten tag", "ciao", "shalom", "namaste", "salaam", "konichiwa", "vanakkam", "ayubovan"
+            "isQuestion": false,
+            "keywords": [
+                "hello", "hi", "hey", "greetings", "good day", "howdy", "yo", "hi there", "good to see you",
+                "good morning", "good evening", "good afternoon", "salutations", "hello there", "hey there",
+                "morning", "evening", "afternoon", "hola", "bonjour", "guten tag", "ciao", "shalom",
+                "namaste", "salaam", "konichiwa", "vanakkam", "ayubovan", "buenos dias", "buongiorno",
+                "dzień dobry", "goddag", "hyvää päivää", "selamat siang"
             ],
-            "sentences": [
+            "phrases": [
                 "Hello{name}!", "Hi{name}!", "Hi there{name}!", "Hey{name}!", "Greetings{name}!",
-                "Good day{name}!", "Howdy{name}!", "What's up{name}?", "Yo{name}!", "Hello there{name}!",
-                "Welcome{name}!"
+                "Good day{name}!", "Howdy{name}!", "Yo{name}!", "Hello there{name}!", "Welcome{name}!",
+                "Pleasure seeing you{name}!", "Glad you're here{name}!", "Nice to have you back{name}!",
+                "Let's get started{name}!", "Ready when you are{name}!", "It’s wonderful to see you{name}!",
+                "Thanks for coming by{name}!", "What a pleasant surprise to see you{name}!", 
+                "You’ve brightened my day{name}!", "Always a joy to greet you{name}!"
             ],
-            "followUpKeys": ["welcome", "help"]
+            "followUpKeys": ["welcome", "help"],
+            "reactionKeys": ["hi", "how"]
+        },
+        {
+            "key": "how",
+            "isQuestion": true,
+            "keywords": [
+                "what's good", "what's happening", "how goes it", "how are you", "how's it going",
+                "what's new", "how do you do", "sup", "what's up", "what's the latest", "how's your day",
+                "how's life treating you", "how have you been", "any news", "what’s going on"
+            ],
+            "phrases": [
+                "What's up{name}?", "How's everything going{name}?", "How are you{name}?",
+                "What's new{name}?", "How's it going{name}?", "How do you do{name}?", 
+                "Anything new happening{name}?", "How have things been with you{name}?",
+                "What’s going on with you lately{name}?", "Got any plans today{name}?",
+                "How’s your day shaping up{name}?", "What’s the latest in your world{name}?",
+                "How’s life treating you these days{name}?", "Anything exciting going on{name}?", 
+                "How’s everything on your end{name}?"
+            ],
+            "followUpKeys": ["help"],
+            "reactionKeys": []
+        },
+        {
+            "key": "fine",
+            "isQuestion": false,
+            "keywords": [
+                "all good", "doing well", "okay", "feeling good", "everything's fine", "all set", 
+                "everything alright", "quite alright", "perfectly fine", "in good shape", "nothing wrong", 
+                "no problems here", "status positive", "all is well", "feeling great", "in great spirits"
+            ],
+            "phrases": [
+                "All good here{name}, thanks!", "Doing well{name}, thank you!", "Everything's fine{name}, no worries here!",
+                "I'm okay{name}, all systems are go!", "Feeling good{name} and ready to assist!", "Quite alright{name}, thanks for asking!",
+                "Perfectly fine{name}, how can I help you today?", "In good shape{name}, ready for your commands!", 
+                "Nothing wrong here{name}, everything's running smoothly!", "No problems here{name}, everything's under control!",
+                "All is well{name}, let's get to work!", "Feeling great{name}, let's dive into your queries!", 
+                "In great spirits{name}, what's next on the agenda?"
+            ],
+            "followUpKeys": [],
+            "reactionKeys": []
         },
         {
             "key": "bye",
-            "isOptional": true,
-            "triggers": [
-                "bye", "goodbye", "see you later", "see you soon", "until next time", "farewell", "take care", 
-                "see you", "i must go", "i have to go", "good night", "adios", "auf wiedersehen", "sayonara", "au revoir", 
-                "so long", "im off", "yanawa", "poren"
+            "isQuestion": false,
+            "keywords": [
+                "bye", "goodbye", "see you later", "see you soon", "until next time", "farewell", "take care",
+                "see you", "I must go", "I have to go", "good night", "adios", "auf wiedersehen", "sayonara", "au revoir",
+                "so long", "I'm off", "yanawa", "poren", "parting", "adios amigo", "check you later", "catch you later"
             ],
-            "sentences": [
-                "Goodbye{name}!", "Bye{name}!", "Take care{name}!", 
-                "Until next time{name}!", "See you soon{name}!", "Farewell{name}!", "Hope to see you soon{name}!",
-                "Have a great day{name}!", "All the best{name}!", "Safe travels{name}!"
+            "phrases": [
+                "Goodbye{name}!", "Bye{name}!", "Take care{name}!", "Until next time{name}!", "See you soon{name}!",
+                "Farewell{name}!", "Hope to see you soon{name}!", "Have a great day{name}!", "All the best{name}!",
+                "Safe travels{name}!", "It was good seeing you{name}!", "Wishing you all the best{name}!",
+                "Catch you on the flip side{name}!", "Goodbye for now{name}!", "See you on the other side{name}!",
+                "Take it easy{name}!", "Keep in touch{name}!", "Good luck with everything{name}!"
             ],
-            "followUpKeys": ["later", "wish"]
+            "followUpKeys": ["later", "wish"],
+            "reactionKeys": []
         },
         {
             "key": "later",
-            "isOptional": false,
-            "triggers": [
-                "catch you later", "talk to you later", "later", "see you soon", "until next time", "until we meet again", 
-                "see you next time", "goodbye for now", "be seeing you", "till next time", "see you in a bit", 
-                "looking forward to our next conversation", "bye for now", "lets catch up soon", "well speak soon"
+            "isQuestion": false,
+            "keywords": [
+                "catch you later", "talk to you later", "later", "see you soon", "until next time", "until we meet again",
+                "see you next time", "goodbye for now", "be seeing you", "till next time", "see you in a bit",
+                "looking forward to our next conversation", "bye for now", "let's catch up soon", "we'll speak soon",
+                "bye for now", "later gator", "in a while", "see ya", "hit you up later", "until later", "see you later alligator"
             ],
-            "sentences": [
+            "phrases": [
                 "Looking forward to our next chat{name}!", "Catch you later{name}!", "See you later{name}!",
                 "Can't wait to talk again soon{name}!", "Until next time{name}!", "See you soon{name}!",
                 "Looking forward to catching up again{name}!", "Hope to see you soon{name}!", "Till next time{name}!",
                 "Let's chat again soon{name}!", "Bye for now{name}! Stay in touch.", "I'll be here when you return{name}.",
-                "Can't wait to continue our conversation{name}!", "Feel free to drop by anytime{name}!", "Jayawewa{name}."
+                "Can't wait to continue our conversation{name}!", "Feel free to drop by anytime{name}!", "Jayawewa{name}.",
+                "Take care until next time{name}!", "Until we meet again{name}!", "It's always a pleasure, see you soon{name}!"
             ],
-            "followUpKeys": ["wish"]
+            "followUpKeys": ["wish"],
+            "reactionKeys": []
+        },
+        {
+            "key": "thanks",
+            "isQuestion": false,
+            "keywords": [
+                "thanks", "thank you", "much appreciated", "so grateful", "you're a lifesaver", "appreciate it", 
+                "that was helpful", "grateful", "you rock", "kudos", "hats off", "cheers", "ela"
+            ],
+            "phrases": [
+                "You're welcome{name}!", "Glad it helped{name}!", "Pleasure to help you{name}!", 
+                "Always nice to help you{name}!", "No problem at all{name}!", "Happy to assist anytime{name}!", 
+                "It's my pleasure to support you{name}!", "Don't mention it{name}!", 
+                "I'm here whenever you need me{name}.", "Your appreciation means a lot{name}!",
+                "Thank you for your kind words{name}!", "It's always a pleasure to assist you{name}.",
+                "Feel free to ask for help anytime{name}."
+            ],
+            "followUpKeys": ["wish", "help"],
+            "reactionKeys": []
         },
         {
             "key": "welcome",
-            "isOptional": true,
-            "triggers": [
-                "thanks", "thank you", "youre the best", "respect", "youre great", "much appreciated", "so grateful", 
-                "couldnt have done it without you", "you're a lifesaver", "appreciate it", "that was helpful", "grateful",
-                "you rock", "kudos", "hats off", "cheers", "ela"
+            "isQuestion": false,
+            "keywords": [
+                "hello", "welcome", "greetings", "welcome back", "good to see you", "nice to see you", "youre the best", 
+                "respect", "youre great"
             ],
-            "sentences": [
-                "You're welcome{name}!", "Glad it helped{name}!", "Pleasure to help you{name}!", "Always nice to help you{name}!",
-                "No problem at all{name}!", "Happy to assist anytime{name}!", "I'm here whenever you need me{name}.", 
-                "It's my pleasure to support you{name}!", "Don't mention it{name}!", "I'm glad to be of service{name}.",
-                "Anytime{name}, I'm here to help!", "Your appreciation means a lot{name}!", "Thank you for your kind words{name}!",
-                "It's always a pleasure to assist you{name}.", "Feel free to ask for help anytime{name}."
+            "phrases": [
+                "Welcome{name}!", "Greetings{name}!", "Good to see you{name}!", "Nice to see you again{name}!", 
+                "Welcome back{name}!", "Always a pleasure to have you here{name}!", "How can I make your day better{name}?",
+                "I'm glad you're here{name}!", "We missed you{name}!", "What brings you here today{name}?"
             ],
-            "followUpKeys": ["wish", "help"]
+            "followUpKeys": ["help"],
+            "reactionKeys": []
         },
         {
             "key": "wish",
-            "isOptional": true,
-            "triggers": [
+            "isQuestion": false,
+            "keywords": [
                 "nice to meet you", "pleased to meet you", "good to meet you", "glad to know you", "happy to see you",
-                "its been great talking", "thank you", "thanks", "appreciate it", "thats kind of you", "youre kind",
-                "youre welcome", "no problem", "my pleasure", "anytime", "glad i could help"
+                "great talking", "lovely chatting", "grateful to meet you", "it's been delightful", "pleasant meeting",
+                "fond farewell", "catch up soon", "let's meet again"
             ],
-            "sentences": [
+            "phrases": [
                 "Good to meet you{name}!", "Pleasure to meet you{name}!", "It's a pleasure meeting you{name}!", 
                 "I'm glad we've met{name}!", "Nice to see you{name}!", "It's always a pleasure to see you{name}!", 
                 "It was nice talking to you{name}!", "Looking forward to our next chat{name}!", "Happy to have met you{name}!", 
-                "Delighted to make your acquaintance{name}!", "Thank you for stopping by{name}!", "Always nice to help you{name}!", 
-                "Glad you reached out{name}!", "Hope to hear from you again soon{name}!", "Thank you for your kindness{name}!", 
-                "I appreciate your words{name}!", "You're always welcome here{name}!", "Let me know if you need anything else{name}!", 
-                "Your satisfaction is my priority{name}!", "Feel free to ask any questions{name}!"
+                "Delighted to make your acquaintance{name}!", "Always nice to help you{name}!", 
+                "Glad you reached out{name}!", "Hope to hear from you again soon{name}!", 
+                "Let me know if you need anything else{name}!", "Your satisfaction is my priority{name}!", 
+                "Feel free to ask any questions{name}!", "Grateful for our conversation{name}!", 
+                "Let's do this again sometime{name}!", "Don't hesitate to reach out{name}!", 
+                "Always here to support you{name}!", "Wishing you all the best{name}!", 
+                "May your day be as pleasant as our conversation{name}!", "Farewell until we meet again{name}!", 
+                "Looking forward to seeing you again{name}!", "I cherish our meetings{name}!", 
+                "Your presence is always appreciated{name}!"
             ],
-            "followUpKeys": ["help"]
+            "followUpKeys": ["help"],
+            "reactionKeys": []
+        },
+        {
+            "key": "ask-help",
+            "isQuestion": true,
+            "keywords": [
+                "can you help", "need help", "assist me", "support", "help please", "could use some help", "require assistance",
+                "can I get some help", "support needed", "please assist", "could you assist", "help me out", "I need support",
+                "aid me", "give me a hand", "could use your assistance"
+            ],
+            "phrases": [
+                "I need help{name}!", "Aid me please{name}.", "Could you lend a hand{name}?", "I'm in need of some assistance{name}.",
+                "Please help me out{name}.", "I could really use your support{name}.", "Any help would be appreciated{name}.",
+                "Can you assist me with this{name}?", "I'm struggling with this, can you help{name}?", "I could use some expert advice{name}."
+            ],
+            "followUpKeys": ["help"],
+            "reactionKeys": []
         },
         {
             "key": "help",
-            "isOptional": true,
-            "triggers": [
-                "can you help", "need help", "assist me", "support", "help please", "could use some help", "require assistance",
-                "can i get some help", "support needed", "please assist", "could you assist", "help me out", "i need support",
-                "aid me", "give me a hand", "could use your assistance"
+            "required": false,
+            "keywords": [
+                "offering help", "ready to assist", "available to help", "here for you", "support is here",
+                "assistance available", "how can I assist", "what do you need", "how may I help", "any assistance needed"
             ],
-            "sentences": [
+            "phrases": [
                 "How may I assist you today{name}?", "What can I do for you today{name}?", "Is there something I can help with{name}?",
                 "How may I help you today{name}?", "Anything you need assistance with{name}?", "What do you need help with{name}?",
                 "How can I brighten your day today{name}?", "How's it going{name}? Can I help in any way?", 
@@ -103,20 +190,44 @@
                 "Can I offer my assistance with something you're working on{name}?", "I'm ready to help, just tell me what you need{name}.",
                 "Your wish is my command{name}. What help do you seek?", "How can I serve you best today{name}?"
             ],
-            "followUpKeys": ["student", "teacher"]
+            "followUpKeys": ["student", "teacher"],
+            "reactionKeys": []
         },
-
-
         {
-            "key": "joke",
-            "isOptional": true,
-            "triggers": [
+            "key": "tell-joke",
+            "isQuestion": true,
+            "keywords": [
                 "jokes", "tell me a joke", "tell me a funny story", "do you know any jokes", "make me laugh",
                 "something funny", "tell a joke", "funny story", "make me smile", "cheer me up", "lighten the mood",
                 "need a laugh", "got any jokes", "hit me with a joke", "meow", "blah blah", "woof woof", "giggle",
                 "funny", "humor me", "crack me up", "funniest thing", "laugh", "funny one", "got jokes", "silly me"
             ],
-            "sentences": [
+            "phrases": [
+                "Do you have a joke for me today{name}?", "I could use a good laugh, got a joke{name}?", 
+                "What’s the funniest thing you’ve heard recently{name}?", "Make me smile with a joke{name}!",
+                "Can you tell me something funny{name}?", "I'm in the mood for a good chuckle, share a joke{name}!",
+                "Let's hear a funny story{name}!", "Know any good jokes lately{name}?", 
+                "Brighten my day with some humor{name}!", "Hit me with your best joke{name}!",
+                "What’s the funniest thing you know{name}?", "Let’s lighten the mood with a joke{name}!",
+                "Cheer me up with a funny story{name}!", "Got something to make me laugh{name}?",
+                "Share a giggle with me, what's a good joke{name}?"
+            ],
+            "followUpKeys": [],
+            "reactionKeys": []
+        },
+        {
+            "key": "joke",
+            "isQuestion": false,
+            "keywords": [
+                "here's a joke", "this will be funny", "want to hear a joke?", "ready for a laugh?", 
+                "let me tell you a joke", "funny story incoming", "get ready to laugh", "hope you find this funny",
+                "here comes a joke", "listen to this joke", "funny thing happened", "I have a joke for you", 
+                "this one is hilarious", "check out this joke", "hear this joke", "brace for a joke", 
+                "laugh with me", "this joke will crack you up", "a joke to lighten the mood", "let’s have a laugh",
+                "time for a chuckle", "here's something funny", "this joke is on me", "got a funny one for you",
+                "prepare to giggle", "I promise this is funny", "laugh out loud moment", "ready for some humor"
+            ],
+            "phrases": [
                 "Why don't some couples go to the gym{name}? Because some relationships don't work out!",
                 "I told my wife she was drawing her eyebrows too high{name}. She looked surprised.",
                 "Why did the scarecrow win an award{name}? Because he was outstanding in his field!",
@@ -249,35 +360,64 @@
                 "What do you call cheese that isn't yours? Nacho cheese!",
                 "I'm reading a book on anti-gravity. It's impossible to put down!"
             ],
-            "followUpKeys": ["help"]
+            "followUpKeys": ["help"],
+            "reactionKeys": []
         },
         {
-            "key": "404",
-            "isOptional": false,
-            "triggers": [],
-            "sentences": [
-                "I'm not sure how to respond to that. Could you try asking in a different way?",
-                "Hmm, I don't quite understand. Can you phrase it differently?",
-                "I need a little more information to help out. Can you elaborate?",
-                "That's a tough one. Maybe try rephrasing your question?",
-                "I'm stumped! Try asking me in another way.",
-                "Can you reword your question? I'm here to help!",
-                "That didn't compute. Please ask me something else or in another way.",
-                "I'm not quite sure what you mean. Could you clarify?",
-                "Help me help you. Could you ask that differently?",
-                "I'm having trouble understanding. Could you try a different question?",
-                "Not sure I follow. Could you use different words?",
-                "That's confusing to me. A different question, maybe?",
-                "I don't get it. Could you rephrase?",
-                "Oops, I'm drawing a blank. Try phrasing it another way?",
-                "Can you simplify your question? I might be able to help then.",
-                "I think I need a different question to provide the right answer.",
-                "I'm at a loss. Maybe try rephrasing your question?",
-                "Sorry, I didn't catch that. Could you ask in another way?",
-                "I'm not able to help with that. A different question might work better.",
-                "I'm puzzled. Maybe try framing your question differently?"
+            "key": "confused",
+            "isQuestion": true,
+            "keywords": [
+                "I'm confused", "don't understand", "what do you mean", "can't comprehend",
+                "that's unclear", "makes no sense", "I'm puzzled", "confusing statement", 
+                "what is that", "clarify please", "not clear to me", "don't get it"
             ],
-            "followUpKeys": ["help"]
+            "phrases": [
+                "Hmm, I don't quite understand{name}.", 
+                "That's a tough one{name}.",
+                "I'm stumped{name}!",
+                "That didn't compute{name}.",
+                "I'm not quite sure what you mean{name}.",
+                "I'm having trouble understanding{name}.",
+                "Not sure I follow{name}.",
+                "That's confusing to me{name}.",
+                "I don't get it{name}.",
+                "Oops, I'm drawing a blank{name}.",
+                "I'm at a loss{name}.",
+                "Sorry, I didn't catch that{name}.",
+                "I'm puzzled{name}."
+            ],
+            "followUpKeys": ["ask-clarity"],
+            "reactionKeys": []
+        },
+        {
+            "key": "ask-clarity",
+            "isQuestion": true,
+            "keywords": [
+                "please clarify", "rephrase please", "say differently", "need more info",
+                "ask differently", "elaborate more", "be more specific", "clarify that", 
+                "another way please", "reword please", "more details", "explain more"
+            ],
+            "phrases": [
+                "Could you try asking in a different way{name}?",
+                "Can you phrase it differently{name}?",
+                "I need a little more information to help out{name}. Can you elaborate?",
+                "Maybe try rephrasing your question{name}?",
+                "Can you reword your question{name}? I'm here to help!",
+                "Please ask me something else or in another way{name}.",
+                "Help me help you. Could you ask that differently{name}?",
+                "Could you try a different question{name}?",
+                "Not sure I follow. Could you use different words{name}?",
+                "A different question, maybe{name}?",
+                "Could you rephrase{name}?",
+                "Can you simplify your question{name}? I might be able to help then.",
+                "I think I need a different question to provide the right answer{name}.",
+                "Maybe try rephrasing your question{name}?",
+                "Sorry, I didn't catch that. Could you ask in another way{name}?",
+                "I'm not able to help with that. A different question might work better{name}.",
+                "Maybe try framing your question differently{name}?"
+            ],
+            "followUpKeys": [],
+            "reactionKeys": []
         }
     ]
 }
