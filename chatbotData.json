@@ -21,9 +21,19 @@
             "isImportant": false,
             "isQuestion": false,
             "keywords": [
-                "ninja", "potato", "rocket", "gizmo", "bender", "widget", "muffin", "wombat", 
-                "peanut", "gadget", "bandit", "rascal", "biscuit", "tango", "snack", "pickle", 
-                "cheeto", "fidget", "puzzle", "squash"
+                "ninja", "potato", "rocket", "gizmo", "bender", "widget", "muffin", "wombat",
+                "peanut", "gadget", "bandit", "rascal", "biscuit", "tango", "snack", "pickle",
+                "cheeto", "fidget", "puzzle", "squash", "twirl", "sparky", "bumper", "doodle",
+                "whiz", "zipper", "quirk", "jester", "zippy", "bouncy", "spunky", "blip", "twix",
+                "flip", "scamp", "boomer", "chip", "crisp", "scoot", "tinker", "swifty", "slinky",
+                "glimmer", "glitch", "sprout", "crumble", "snippet", "dash", "dazzle", "flick",
+                "sparkle", "chunky", "bloop", "poppet", "frizzle", "quibble", "twizzle", "jinx",
+                "whimsy", "puffin", "zesty", "quiver", "razzle", "zip", "snazzy", "breezy",
+                "tricky", "munchy", "cranky", "fluffy", "tizzy", "dandy", "goober", "flapper",
+                "puddles", "whopper", "snooze", "snuggle", "bubbly", "giggles", "pipsqueak",
+                "tadpole", "wiggly", "skippy", "stomper", "loopy", "zinger", "smarty",
+                "squiggle", "boogie", "noodle", "fizz", "bug", "swoosh", "swizzle", "fudge",
+                "dasher", "nifty", "chirp", "wizzy"
             ],
             "phrases": [
                 "I'm called{self}!", "People call me{self}.", "My name is{self}.",
