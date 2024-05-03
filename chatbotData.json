@@ -31,7 +31,7 @@
                 "whimsy", "puffin", "zesty", "quiver", "razzle", "zip", "snazzy", "breezy",
                 "tricky", "munchy", "cranky", "fluffy", "tizzy", "dandy", "goober", "flapper",
                 "puddles", "whopper", "snooze", "snuggle", "bubbly", "giggles", "pipsqueak",
-                "tadpole", "wiggly", "skippy", "stomper", "loopy", "zinger", "smarty",
+                "tadpole", "wiggly", "skippy", "stomper", "loopy", "zinger",
                 "squiggle", "boogie", "noodle", "fizz", "bug", "swoosh", "swizzle", "fudge",
                 "dasher", "nifty", "chirp", "wizzy"
             ],
@@ -214,7 +214,7 @@
             "keywords": [
                 "what's good", "what's happening", "how goes it", "how are you", "how's it going",
                 "what's new", "how do you do", "sup", "what's up", "what's the latest", "how's your day",
-                "how's life treating you", "how have you been", "any news", "what’s going on"
+                "how's life treating you", "how have you been", "any news", "what’s going on", "how you doing"
             ],
             "phrases": [
                 "What's up{target}?", "How's everything going{target}?", "How are you{target}?",
@@ -282,8 +282,9 @@
                 "Can't wait to talk again soon{target}!", "Until next time{target}!", "See you soon{target}!",
                 "Looking forward to catching up again{target}!", "Hope to see you soon{target}!", "Till next time{target}!",
                 "Let's chat again soon{target}!", "Bye for now{target}! Stay in touch.", "I'll be here when you return{target}.",
-                "Can't wait to continue our conversation{target}!", "Feel free to drop by anytime{target}!", "Jayawewa{target}.",
-                "Take care until next time{target}!", "Until we meet again{target}!", "It's always a pleasure, see you soon{target}!"
+                "Can't wait to continue our conversation{target}!", "Feel free to drop by anytime{target}!",
+                "Take care until next time{target}!", "Until we meet again{target}!", "It's always a pleasure, see you soon{target}!", 
+                "Farewell until we meet again{target}!", "Looking forward to seeing you again{target}!"
             ],
             "followUpKeys": ["wish"],
             "reactionKeys": ["say-bye"]
@@ -358,7 +359,7 @@
                 "Glad to know everything's fine{target}!", "That's relieving to hear{target}!", 
                 "I'm so glad everything is alright{target}!", "Very happy to hear that{target}!",
                 "Pleased to hear you're doing well{target}!", "Relieved to hear that{target}, let's continue!",
-                "That's fantastic{target}, what a relief!", "Sounds great{target}, what's next?"
+                "That's fantastic{target}, what a relief!", "Sounds great{target}, what's next?", "Elakiri{target}!", "Neruppu{target}!"
             ],
             "followUpKeys": ["ask-to-help"],
             "reactionKeys": ["welcome", "ask-to-help"]
@@ -382,9 +383,8 @@
                 "Feel free to ask any questions{target}!", "Grateful for our conversation{target}!", 
                 "Let's do this again sometime{target}!", "Don't hesitate to reach out{target}!", 
                 "Always here to support you{target}!", "Wishing you all the best{target}!", 
-                "May your day be as pleasant as our conversation{target}!", "Farewell until we meet again{target}!", 
-                "Looking forward to seeing you again{target}!", "I cherish our meetings{target}!", 
-                "Your presence is always appreciated{target}!", "Jayawewa{target}!"
+                "May your day be as pleasant as our conversation{target}!", "I cherish our meetings{target}!", 
+                "Your presence is always appreciated{target}!", "Jayawewa{target}!", "Vaazhga Valamudan{target}!"
             ],
             "followUpKeys": ["ask-to-help"],
             "reactionKeys": ["say-thanks"]
