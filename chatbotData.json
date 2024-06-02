@@ -715,5 +715,108 @@
             "followUpKeys": ["wish"],
             "reactionKeys": ["ask-to-help"]
         }
+    ],
+    "knowledgeBase":[
+        {
+            "triggers": [
+              "what is artificial intelligence", 
+              "define artificial intelligence", 
+              "explain artificial intelligence", 
+              "what is ai", 
+              "define ai", 
+              "explain ai"
+            ],
+            "response": "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. AI systems are used in various applications, including natural language processing, robotics, and decision-making."
+        },
+        {
+            "triggers": [
+                "what is machine learning", 
+                "define machine learning", 
+                "explain machine learning", 
+                "what is ml", 
+                "define ml", 
+                "explain ml"
+            ],
+            "response": "Machine Learning (ML) is a subset of AI that involves the use of algorithms and statistical models to enable machines to improve their performance on tasks through experience. It is based on the idea that systems can learn from data, identify patterns, and make decisions with minimal human intervention."
+        },
+        {
+            "triggers": [
+                "what is deep learning", 
+                "define deep learning", 
+                "explain deep learning", 
+                "what is dl", 
+                "define dl", 
+                "explain dl"
+            ],
+            "response": "Deep Learning (DL) is a subset of machine learning that uses neural networks with many layers (deep neural networks) to analyze various types of data. It is particularly effective in processing large amounts of data and is used in applications such as image and speech recognition."
+        },
+        {
+            "triggers": [
+                "what is natural language processing", 
+                "define natural language processing", 
+                "explain natural language processing", 
+                "what is nlp", 
+                "define nlp", 
+                "explain nlp"
+            ],
+            "response": "Natural Language Processing (NLP) is a field of AI that focuses on the interaction between computers and humans through natural language. It involves the development of algorithms and models that enable machines to understand, interpret, and generate human language."
+        },
+        {
+            "triggers": [
+                "what is computer vision", 
+                "define computer vision", 
+                "explain computer vision", 
+                "what is cv", 
+                "define cv", 
+                "explain cv"
+            ],
+            "response": "Computer Vision (CV) is a field of AI that enables machines to interpret and understand the visual world. By using digital images from cameras and videos and deep learning models, machines can accurately identify and classify objects, and then react to what they 'see'."
+        },
+        {
+            "triggers": [
+                "what is robotics", 
+                "define robotics", 
+                "explain robotics"
+            ],
+            "response": "Robotics is a branch of AI that deals with the design, construction, operation, and use of robots. Robots are machines that can be programmed to perform tasks autonomously or semi-autonomously. They are used in various industries, including manufacturing, healthcare, and space exploration."
+        },
+        {
+            "triggers": [
+                "what is reinforcement learning", 
+                "define reinforcement learning", 
+                "explain reinforcement learning", 
+                "what is rl", 
+                "define rl", 
+                "explain rl"
+            ],
+            "response": "Reinforcement Learning (RL) is an area of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward. It is inspired by behavioral psychology and is used in various applications, such as gaming, robotics, and autonomous vehicles."
+        },
+        {
+            "triggers": [
+                "what is neural network", 
+                "define neural network", 
+                "explain neural network", 
+                "what is nn", 
+                "define nn", 
+                "explain nn"
+            ],
+            "response": "A Neural Network (NN) is a series of algorithms that attempt to recognize underlying relationships in a set of data through a process that mimics the way the human brain operates. Neural networks can adapt to changing input; so the network generates the best possible result without needing to redesign the output criteria."
+        },
+        {
+            "triggers": [
+                "what is supervised learning", 
+                "define supervised learning", 
+                "explain supervised learning"
+            ],
+            "response": "Supervised Learning is a type of machine learning where the model is trained on labeled data. The algorithm learns from a training dataset and makes predictions based on that data. It is used in various applications, such as email spam detection, fraud detection, and image classification."
+        },
+        {
+            "triggers": [
+                "what is unsupervised learning", 
+                "define unsupervised learning", 
+                "explain unsupervised learning"
+            ],
+            "response": "Unsupervised Learning is a type of machine learning where the model is trained on unlabeled data. The algorithm tries to learn the patterns and the structure from the data without any explicit instructions. It is used in clustering, association, and anomaly detection tasks."
+        }
     ]
 }
