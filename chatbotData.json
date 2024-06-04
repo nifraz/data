@@ -199,7 +199,7 @@
             "phrases": [
                 "Hello{target}!", "Hi{target}!", "Hi there{target}!", "Hey{target}!", "Greetings{target}!",
                 "Good day{target}!", "Howdy{target}!", "Yo{target}!", "Hello there{target}!", "Welcome{target}!",
-                "Pleasure seeing you{target}!", "Glad you're here{target}!", "Nice to have you back{target}!",
+                "Pleasure seeing you{target}!", "Glad you're here{target}!", "Nice to have you{target}!",
                 "Let's get started{target}!", "Ready when you are{target}!", "It’s wonderful to see you{target}!",
                 "Thanks for coming by{target}!", "What a pleasant surprise to see you{target}!", 
                 "You’ve brightened my day{target}!", "Always a joy to greet you{target}!"
@@ -290,6 +290,52 @@
             "reactionKeys": ["say-bye"]
         },
         {
+            "key": "ask-for-answer",
+            "isImportant": false,
+            "isQuestion": true,
+            "keywords": [
+                "what's the answer", "what is the answer", "tell me the answer", "can you tell me the answer", 
+                "do you know the answer", "what's the solution", "what's the response", "what's your reply"
+            ],
+            "phrases": [
+                "What's the answer{target}?", "Can you tell me the answer{target}?", 
+                "What will be your response{target}?", "I'd like to know the answer{target}.", 
+                "Could you share the answer with me{target}?"
+            ],
+            "followUpKeys": [],
+            "reactionKeys": ["say-im-confused", "cannot-share"]
+        },
+        {
+            "key": "i-will-remember",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "i'll remember", "will remember", "i will remember", "noted", "got it", "understood", "taking note"
+            ],
+            "phrases": [
+                "I will remember that{target}.", "I'll keep that in mind{target}.", "Got it{target}!", "Understood{target}.", 
+                "Noted{target}.", "I'll make a note of that{target}."
+            ],
+            "followUpKeys": ["say-thanks", "say-its-great"],
+            "reactionKeys": ["say-random-thing", "tell-a-joke", "ask-to-help"]
+        },
+        {
+            "key": "cannot-share",
+            "isImportant": false,
+            "isQuestion": false,
+            "keywords": [
+                "secret", "can't share", "cannot share", "confidential", "private", "not allowed", "not permitted"
+            ],
+            "phrases": [
+                "It's a secret and I cannot share that{target}.", "Sorry, that's confidential and I can't share it{target}.", 
+                "I'm afraid I can't share that information{target}.", "That's private and not allowed to be shared{target}.", 
+                "Unfortunately, I can't disclose that{target}.", "That's not something I can share{target}.", 
+                "It's confidential and I can't provide that information{target}."
+            ],
+            "followUpKeys": ["ask-for-reason", "say-thanks"],
+            "reactionKeys": ["say-its-great", "acknowledge"]
+        },
+        {
             "key": "say-thanks",
             "isImportant": false,
             "isQuestion": false,
@@ -306,19 +352,19 @@
                 "Feel free to ask for help anytime{target}."
             ],
             "followUpKeys": ["wish", "ask-to-help"],
-            "reactionKeys": ["welcome"]
+            "reactionKeys": ["welcome", "say-its-great"]
         },
         {
             "key": "welcome",
             "isImportant": false,
             "isQuestion": false,
             "keywords": [
-                "hello", "welcome", "greetings", "welcome back", "good to see you", "nice to see you", "youre the best", 
+                "hello", "welcome", "greetings", "you are welcome", "good to see you", "nice to see you", "youre the best", 
                 "respect", "youre great"
             ],
             "phrases": [
-                "Welcome{target}!", "Greetings{target}!", "Good to see you{target}!", "Nice to see you again{target}!", 
-                "Welcome back{target}!", "Always a pleasure to have you here{target}!", "How can I make your day better{target}?",
+                "Welcome{target}!", "Good to see you{target}!", "Nice to see you{target}!", 
+                "You're welcome{target}!", "Always a pleasure to have you here{target}!", "How can I make your day better{target}?",
                 "I'm glad you're here{target}!", "We missed you{target}!", "What brings you here today{target}?"
             ],
             "followUpKeys": ["ask-to-help", "say-random-thing"],
@@ -359,7 +405,7 @@
                 "Glad to know everything's fine{target}!", "That's relieving to hear{target}!", 
                 "I'm so glad everything is alright{target}!", "Very happy to hear that{target}!",
                 "Pleased to hear you're doing well{target}!", "Relieved to hear that{target}, let's continue!",
-                "That's fantastic{target}, what a relief!", "Sounds great{target}, what's next?", "Elakiri{target}!", "Neruppu{target}!"
+                "That's fantastic{target}, what a relief!", "Sounds great{target}, what's next?", "Elakiri{target}!"
             ],
             "followUpKeys": ["ask-to-help"],
             "reactionKeys": ["welcome", "ask-to-help"]
